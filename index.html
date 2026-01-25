@@ -1,183 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BookMyAura</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BookMyAura – Beauty & Wellness Booking</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --primary:#6a5cff;
+  --secondary:#b9b5ff;
   --accent:#ff8bd8;
   --bg:#f6f5ff;
+  --glass:rgba(255,255,255,.65);
   --dark:#1e1e2f;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{box-sizing:border-box;margin:0;padding:0;}
 
 body{
   font-family:'Inter',sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(138,135,255,.25), transparent 40%),
-    radial-gradient(circle at bottom right, rgba(255,139,216,.25), transparent 40%),
-    linear-gradient(180deg,#f6f5ff,#ffffff);
+    radial-gradient(circle at top, #ebe9ff, #f6f5ff);
   color:var(--dark);
   overflow-x:hidden;
 }
 
-/* ================= BRAND TOP ================= */
+/* ================= BRAND ================= */
 .brand{
-  padding:40px 10%;
-  font-size:1.6rem;
+  padding:60px 10% 10px;
+  text-align:center;
+}
+
+.brand h1{
+  font-size:3.4rem;
   font-weight:700;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 /* ================= HERO ================= */
 .hero{
-  padding:80px 10%;
+  min-height:90vh;
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:60px;
+  justify-content:center;
+  position:relative;
+  perspective:1600px;
 }
 
-.hero-text{
-  max-width:520px;
-}
-
-.hero h1{
-  font-size:3.1rem;
-  font-weight:700;
-}
-
-.hero h1 span{color:var(--primary);}
-
-.hero p{
-  margin-top:18px;
-  font-size:1.1rem;
-  color:#555;
-}
-
-.hero-buttons{
-  margin-top:34px;
-  display:flex;
-  gap:18px;
-}
-
-.btn{
-  padding:14px 28px;
-  border-radius:16px;
-  border:none;
-  cursor:pointer;
-  font-size:.95rem;
-  transition:.3s ease;
-}
-
-.btn-primary{
-  background:linear-gradient(135deg,var(--primary),#857bff);
-  color:#fff;
-  box-shadow:0 20px 40px rgba(106,92,255,.35);
-}
-
-.btn-primary:hover{transform:translateY(-3px);}
-
-.btn-outline{
-  background:transparent;
-  border:1px solid var(--primary);
-  color:var(--primary);
-}
-
-/* ================= 3D PHONE ================= */
+/* ================= PHONE + 3D SCREENS ================= */
 .phone-wrap{
-  width:320px;
+  position:relative;
+  width:340px;
   height:620px;
-  perspective:1400px;
 }
 
 .phone{
-  width:100%;
-  height:100%;
-  border-radius:44px;
-  background:linear-gradient(160deg,#fff,#f0efff);
-  box-shadow:0 60px 120px rgba(0,0,0,.25);
-  position:relative;
-  transform-style:preserve-3d;
-  animation:float 6s ease-in-out infinite;
+  width:280px;
+  height:560px;
+  border-radius:42px;
+  background:linear-gradient(160deg,#fff,#f1f0ff);
+  box-shadow:0 50px 90px rgba(0,0,0,.25);
+  position:absolute;
+  top:30px;
+  left:30px;
+  transform:rotateY(-12deg) rotateX(6deg);
+  z-index:2;
 }
 
 .phone::before{
   content:"";
   position:absolute;
-  top:10px;
+  top:8px;
   left:50%;
   transform:translateX(-50%);
   width:90px;
-  height:16px;
+  height:18px;
   background:#000;
-  opacity:.08;
   border-radius:0 0 12px 12px;
-  z-index:10;
+  opacity:.08;
 }
 
 .screen{
   position:absolute;
-  inset:14px;
-  border-radius:32px;
-  overflow:visible;
+  width:220px;
+  height:460px;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 40px 80px rgba(0,0,0,.35);
+  transition:transform .9s ease, opacity .9s ease;
 }
 
 .screen img{
-  position:absolute;
   width:100%;
   height:100%;
   object-fit:cover;
-  border-radius:28px;
-  opacity:0;
-  transform:
-    translateZ(-120px)
-    scale(.9);
-  transition:all 1s ease;
 }
 
-.screen img.active{
-  opacity:1;
-  transform:
-    translateZ(60px)
-    scale(1.02);
+/* LEFT */
+.screen.left{
+  top:80px;
+  left:-80px;
+  transform:rotateY(25deg) rotateZ(-6deg) translateZ(60px);
+  z-index:1;
 }
 
-@keyframes float{
-  0%,100%{transform:rotateY(-10deg) rotateX(5deg) translateY(0);}
-  50%{transform:rotateY(-8deg) rotateX(4deg) translateY(-16px);}
+/* CENTER */
+.screen.center{
+  top:50px;
+  left:60px;
+  transform:translateZ(120px);
+  z-index:3;
 }
 
-/* ================= PLATFORM ================= */
-.platform{
+/* RIGHT */
+.screen.right{
+  top:90px;
+  left:220px;
+  transform:rotateY(-25deg) rotateZ(6deg) translateZ(40px);
+  z-index:1;
+}
+
+/* ================= PHASE ================= */
+.phase{
+  padding:80px 10% 40px;
   text-align:center;
-  margin:120px 0 40px;
 }
 
-.platform h3{
-  font-size:1.1rem;
+.phase-box{
+  max-width:760px;
+  margin:auto;
+  background:var(--glass);
+  backdrop-filter:blur(16px);
+  border-radius:26px;
+  padding:40px;
+  box-shadow:0 30px 70px rgba(0,0,0,.1);
+}
+
+.phase h2{
+  font-size:1.9rem;
+  margin-bottom:20px;
+}
+
+.phase-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  margin-top:30px;
+}
+
+.phase-item{
+  padding:26px;
+  border-radius:22px;
+  background:rgba(255,255,255,.7);
+}
+
+.phase-item h3{
+  font-size:1.2rem;
   color:var(--primary);
 }
 
-.platform p{
-  margin-top:10px;
+.phase-item p{
+  margin-top:12px;
+  font-size:.95rem;
   color:#555;
+  line-height:1.6;
 }
 
-/* ================= FEATURES ================= */
+/* ================= WHY (UNCHANGED) ================= */
 .section{
-  padding:120px 10%;
+  padding:100px 10%;
 }
 
 .section h2{
+  font-size:2.2rem;
+  margin-bottom:50px;
   text-align:center;
-  font-size:2.3rem;
-  margin-bottom:60px;
 }
 
 .features{
@@ -187,16 +188,19 @@ body{
 }
 
 .card{
-  background:rgba(255,255,255,.65);
+  background:var(--glass);
   backdrop-filter:blur(14px);
-  border-radius:24px;
-  padding:34px;
+  border-radius:22px;
+  padding:30px;
   text-align:center;
   box-shadow:0 30px 60px rgba(0,0,0,.08);
-  transition:.3s ease;
+  transition:transform .3s ease;
 }
 
 .card:hover{transform:translateY(-10px);}
+
+.card h3{margin-top:15px;}
+.card p{margin-top:10px;font-size:.9rem;color:#555;}
 
 /* ================= FOOTER ================= */
 footer{
@@ -214,67 +218,114 @@ footer a{
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:900px){
-  .hero{flex-direction:column;text-align:center;}
+  .hero{min-height:auto;padding:40px 0;}
+  .phone-wrap{transform:scale(.9);}
+  .phase-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="brand">BookMyAura</div>
+<!-- BRAND -->
+<div class="brand">
+  <h1>BookMyAura</h1>
+</div>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
-    <h1>Book Beauty & Wellness <span>Instantly</span></h1>
-    <p>Discover trusted salons, spas and wellness services near you. Book instantly, pay securely and relax.</p>
-
-    <div class="hero-buttons">
-      <button class="btn btn-primary">Get the App</button>
-      <button class="btn btn-outline">Become a Partner</button>
-    </div>
-  </div>
-
   <div class="phone-wrap">
-    <div class="phone">
-      <div class="screen">
-        <img src="assets/app1.png" class="active">
-        <img src="assets/app2.png">
-        <img src="assets/app3.png">
+
+    <div class="screen left">
+      <img src="assets/app2.png">
+    </div>
+
+    <div class="screen center">
+      <img id="mainScreen" src="assets/app1.png">
+    </div>
+
+    <div class="screen right">
+      <img src="assets/app3.png">
+    </div>
+
+    <div class="phone"></div>
+
+  </div>
+</section>
+
+<!-- PHASE -->
+<section class="phase">
+  <div class="phase-box">
+    <h2>Platform Availability</h2>
+
+    <div class="phase-grid">
+      <div class="phase-item">
+        <h3>📱 Phase One — Android</h3>
+        <p>
+          BookMyAura is launching first on Android with full booking,
+          partner discovery, secure payments, and location-based services.
+          Early users will experience the complete core platform.
+        </p>
+      </div>
+
+      <div class="phase-item">
+        <h3>🍎 Phase Two — iOS</h3>
+        <p>
+          iOS support is under development with the same premium experience.
+          Advanced animations, performance tuning, and Apple ecosystem
+          integrations will follow shortly after Android launch.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="platform">
-  <h3>Platform Availability</h3>
-  <p>Phase 1 • Android &nbsp;&nbsp;|&nbsp;&nbsp; Phase 2 • iOS</p>
-</div>
-
+<!-- WHY BOOKMYAURA (UNCHANGED) -->
 <section class="section">
   <h2>Why BookMyAura</h2>
   <div class="features">
-    <div class="card"><h3>Verified Partners</h3><p>Only trusted professionals.</p></div>
-    <div class="card"><h3>Instant Booking</h3><p>No calls, no waiting.</p></div>
-    <div class="card"><h3>Secure Payments</h3><p>UPI & secure checkout.</p></div>
-    <div class="card"><h3>Nearby Discovery</h3><p>Smart location matching.</p></div>
+    <div class="card">
+      <h3>Verified Partners</h3>
+      <p>Only trusted and verified beauty & wellness businesses.</p>
+    </div>
+    <div class="card">
+      <h3>Instant Booking</h3>
+      <p>No calls, no waiting. Book in seconds.</p>
+    </div>
+    <div class="card">
+      <h3>Secure Payments</h3>
+      <p>UPI & secure payment integrations.</p>
+    </div>
+    <div class="card">
+      <h3>Nearby Discovery</h3>
+      <p>Find services around you with smart location matching.</p>
+    </div>
   </div>
 </section>
 
 <footer>
-  <a href="privacy-policy.html">Privacy Policy</a> |
-  <a href="delete-account.html">Delete Account</a> |
-  <a href="terms.html">Terms</a>
-  <p>© 2026 BookMyAura</p>
+  <p>
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="delete-account.html">Delete Account</a> |
+    <a href="terms.html">Terms</a>
+  </p>
+  <p>© 2026 BookMyAura. All rights reserved.</p>
 </footer>
 
+<!-- 🔥 AUTO SLIDE -->
 <script>
-const slides=document.querySelectorAll(".screen img");
+const screens=["assets/app1.png","assets/app2.png","assets/app3.png"];
 let i=0;
+const main=document.getElementById("mainScreen");
+
 setInterval(()=>{
-  slides[i].classList.remove("active");
-  i=(i+1)%slides.length;
-  slides[i].classList.add("active");
-},3200);
+  main.style.opacity=0;
+  setTimeout(()=>{
+    i=(i+1)%screens.length;
+    main.src=screens[i];
+    main.style.opacity=1;
+  },500);
+},3500);
 </script>
 
 </body>
