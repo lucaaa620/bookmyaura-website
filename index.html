@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookMyAura – Beauty & Wellness Booking</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #6a5cff;
+      --secondary: #b9b5ff;
+      --bg: #f6f5ff;
+      --glass: rgba(255,255,255,0.6);
+      --dark: #1e1e2f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #ebe9ff, #f6f5ff);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--secondary), transparent 70%);
+      filter: blur(80px);
+      top: -100px;
+      right: -150px;
+      z-index: 0;
+    }
+
+    .hero-content {
+      max-width: 520px;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .hero h1 span { color: var(--primary); }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .hero-buttons {
+      margin-top: 35px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .btn {
+      padding: 14px 26px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all .3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #857bff);
+      color: #fff;
+      box-shadow: 0 20px 40px rgba(106,92,255,.35);
+    }
+
+    .btn-primary:hover { transform: translateY(-3px); }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    /* ================= PHONE MOCKUP ================= */
+    .phone {
+      width: 280px;
+      height: 560px;
+      border-radius: 40px;
+      background: linear-gradient(160deg, #ffffff, #f0efff);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.18);
+      position: relative;
+      transform: perspective(1000px) rotateY(-12deg) rotateX(5deg);
+      animation: float 5s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .phone::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 30px;
+      background: #fff;
+    }
+
+    @keyframes float {
+      0%,100% { transform: perspective(1000px) rotateY(-12deg) rotateX(5deg) translateY(0); }
+      50% { transform: perspective(1000px) rotateY(-10deg) rotateX(4deg) translateY(-12px); }
+    }
+
+    /* ================= FEATURES ================= */
+    .section {
+      padding: 100px 10%;
+    }
+
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--glass);
+      backdrop-filter: blur(14px);
+      border-radius: 22px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+      transition: transform .3s ease;
+    }
+
+    .card:hover { transform: translateY(-10px); }
+
+    .card h3 { margin-top: 15px; }
+
+    .card p { margin-top: 10px; font-size: .9rem; color: #555; }
+
+    /* ================= FOOTER ================= */
+    footer {
+      padding: 40px 10%;
+      text-align: center;
+      font-size: .85rem;
+      color: #666;
+    }
+
+    footer a { color: var(--primary); text-decoration: none; margin: 0 8px; }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      .hero { flex-direction: column; text-align: center; }
+      .hero-buttons { justify-content: center; }
+      .phone { margin-top: 50px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Book Beauty & Wellness <span>Instantly</span></h1>
+      <p>Discover trusted salons, spas and wellness services near you. Book instantly, pay securely and relax.</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary">Get the App</button>
+        <button class="btn btn-outline">Become a Partner</button>
+      </div>
+    </div>
+
+    <div class="phone"></div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <h2>Why BookMyAura</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Verified Partners</h3>
+        <p>Only trusted and verified beauty & wellness businesses.</p>
+      </div>
+      <div class="card">
+        <h3>Instant Booking</h3>
+        <p>No calls, no waiting. Book in seconds.</p>
+      </div>
+      <div class="card">
+        <h3>Secure Payments</h3>
+        <p>UPI & secure payment integrations.</p>
+      </div>
+      <div class="card">
+        <h3>Nearby Discovery</h3>
+        <p>Find services around you with smart location matching.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="delete-account.html">Delete Account</a> |
+      <a href="#">Terms</a>
+    </p>
+    <p>© 2026 BookMyAura. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
