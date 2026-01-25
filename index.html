@@ -1,332 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- =========================================================
+     BOOKMYAURA – OFFICIAL WEBSITE
+     Version: 1.0
+     Author: BookMyAura
+     Description: Beauty & Wellness Booking Platform
+========================================================= -->
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>BookMyAura – Beauty & Wellness Booking</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- ================= META ================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root{
-  --primary:#6a5cff;
-  --secondary:#b9b5ff;
-  --accent:#ff8bd8;
-  --bg:#f6f5ff;
-  --glass:rgba(255,255,255,.65);
-  --dark:#1e1e2f;
-}
+  <!-- SEO -->
+  <meta name="title" content="BookMyAura – Beauty & Wellness Booking Platform">
+  <meta name="description" content="Discover and book trusted salons, spas and wellness services near you. Instant booking, verified partners and secure payments.">
+  <meta name="keywords" content="salon booking, spa booking, beauty services, wellness, BookMyAura">
+  <meta name="author" content="BookMyAura">
 
-*{box-sizing:border-box;margin:0;padding:0;}
+  <!-- Open Graph -->
+  <meta property="og:title" content="BookMyAura">
+  <meta property="og:description" content="Beauty & Wellness Booking Platform">
+  <meta property="og:type" content="website">
 
-body{
-  font-family:'Inter',sans-serif;
-  background:
-    radial-gradient(circle at top, #ebe9ff, #f6f5ff);
-  color:var(--dark);
-  overflow-x:hidden;
-}
+  <title>BookMyAura – Beauty & Wellness Booking</title>
 
-/* ================= BRAND ================= */
-.brand{
-  padding:60px 10% 10px;
-  text-align:center;
-}
+  <!-- ================= FONTS ================= -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-.brand h1{
-  font-size:3.4rem;
-  font-weight:700;
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
+  <!-- ================= GLOBAL STYLES ================= -->
+  <style>
 
-/* ================= HERO ================= */
-.hero{
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  perspective:1600px;
-}
+  /* =====================================================
+     ROOT VARIABLES
+  ===================================================== */
+  :root {
+    --primary: #6a5cff;
+    --secondary: #b9b5ff;
+    --accent: #ff8bd8;
+    --bg-main: #f6f5ff;
+    --glass: rgba(255,255,255,0.65);
+    --dark: #1e1e2f;
+    --text-muted: #555;
+    --radius-lg: 28px;
+    --radius-md: 20px;
+    --radius-sm: 14px;
+  }
 
-/* ================= PHONE + 3D SCREENS ================= */
-.phone-wrap{
-  position:relative;
-  width:340px;
-  height:620px;
-}
+  /* =====================================================
+     RESET
+  ===================================================== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-.phone{
-  width:280px;
-  height:560px;
-  border-radius:42px;
-  background:linear-gradient(160deg,#fff,#f1f0ff);
-  box-shadow:0 50px 90px rgba(0,0,0,.25);
-  position:absolute;
-  top:30px;
-  left:30px;
-  transform:rotateY(-12deg) rotateX(6deg);
-  z-index:2;
-}
+  body {
+    font-family: 'Inter', sans-serif;
+    background:
+      radial-gradient(circle at top, #ebe9ff, #f6f5ff);
+    color: var(--dark);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
 
-.phone::before{
-  content:"";
-  position:absolute;
-  top:8px;
-  left:50%;
-  transform:translateX(-50%);
-  width:90px;
-  height:18px;
-  background:#000;
-  border-radius:0 0 12px 12px;
-  opacity:.08;
-}
+  img {
+    max-width: 100%;
+    display: block;
+  }
 
-.screen{
-  position:absolute;
-  width:220px;
-  height:460px;
-  border-radius:26px;
-  overflow:hidden;
-  box-shadow:0 40px 80px rgba(0,0,0,.35);
-  transition:transform .9s ease, opacity .9s ease;
-}
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-.screen img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+  /* =====================================================
+     BRAND HEADER
+  ===================================================== */
+  .brand-header {
+    padding: 70px 10% 30px;
+    text-align: center;
+  }
 
-/* LEFT */
-.screen.left{
-  top:80px;
-  left:-80px;
-  transform:rotateY(25deg) rotateZ(-6deg) translateZ(60px);
-  z-index:1;
-}
+  .brand-header h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-/* CENTER */
-.screen.center{
-  top:50px;
-  left:60px;
-  transform:translateZ(120px);
-  z-index:3;
-}
+  .brand-header p {
+    margin-top: 16px;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+  }
 
-/* RIGHT */
-.screen.right{
-  top:90px;
-  left:220px;
-  transform:rotateY(-25deg) rotateZ(6deg) translateZ(40px);
-  z-index:1;
-}
+  /* =====================================================
+     HERO SECTION
+  ===================================================== */
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1800px;
+    position: relative;
+  }
 
-/* ================= PHASE ================= */
-.phase{
-  padding:80px 10% 40px;
-  text-align:center;
-}
+  /* =====================================================
+     PHONE + SCREEN COMPOSITION
+  ===================================================== */
+  .device-stage {
+    position: relative;
+    width: 380px;
+    height: 650px;
+  }
 
-.phase-box{
-  max-width:760px;
-  margin:auto;
-  background:var(--glass);
-  backdrop-filter:blur(16px);
-  border-radius:26px;
-  padding:40px;
-  box-shadow:0 30px 70px rgba(0,0,0,.1);
-}
+  /* ---------------- PHONE BODY ---------------- */
+  .phone-body {
+    position: absolute;
+    width: 280px;
+    height: 560px;
+    top: 40px;
+    left: 50px;
+    background: linear-gradient(160deg, #ffffff, #f1f0ff);
+    border-radius: 44px;
+    box-shadow: 0 60px 100px rgba(0,0,0,0.25);
+    transform: rotateY(-12deg) rotateX(6deg);
+    z-index: 3;
+  }
 
-.phase h2{
-  font-size:1.9rem;
-  margin-bottom:20px;
-}
+  .phone-body::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 18px;
+    background: #000;
+    opacity: 0.08;
+    border-radius: 0 0 14px 14px;
+  }
 
-.phase-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  margin-top:30px;
-}
+  /* ---------------- FLOATING SCREENS ---------------- */
+  .floating-screen {
+    position: absolute;
+    width: 230px;
+    height: 470px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 40px 90px rgba(0,0,0,0.35);
+    transition: transform 1s ease, opacity 1s ease;
+  }
 
-.phase-item{
-  padding:26px;
-  border-radius:22px;
-  background:rgba(255,255,255,.7);
-}
+  .floating-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-.phase-item h3{
-  font-size:1.2rem;
-  color:var(--primary);
-}
+  .screen-left {
+    top: 120px;
+    left: -90px;
+    transform: rotateY(28deg) rotateZ(-6deg) translateZ(60px);
+    z-index: 1;
+  }
 
-.phase-item p{
-  margin-top:12px;
-  font-size:.95rem;
-  color:#555;
-  line-height:1.6;
-}
+  .screen-center {
+    top: 70px;
+    left: 80px;
+    transform: translateZ(140px);
+    z-index: 4;
+  }
 
-/* ================= WHY (UNCHANGED) ================= */
-.section{
-  padding:100px 10%;
-}
+  .screen-right {
+    top: 130px;
+    left: 240px;
+    transform: rotateY(-28deg) rotateZ(6deg) translateZ(40px);
+    z-index: 1;
+  }
 
-.section h2{
-  font-size:2.2rem;
-  margin-bottom:50px;
-  text-align:center;
-}
+  /* =====================================================
+     PHASE SECTION
+  ===================================================== */
+  .phase-section {
+    padding: 90px 10% 60px;
+    text-align: center;
+  }
 
-.features{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
-}
+  .phase-box {
+    max-width: 900px;
+    margin: auto;
+    background: var(--glass);
+    backdrop-filter: blur(18px);
+    border-radius: var(--radius-lg);
+    padding: 50px;
+    box-shadow: 0 40px 90px rgba(0,0,0,0.1);
+  }
 
-.card{
-  background:var(--glass);
-  backdrop-filter:blur(14px);
-  border-radius:22px;
-  padding:30px;
-  text-align:center;
-  box-shadow:0 30px 60px rgba(0,0,0,.08);
-  transition:transform .3s ease;
-}
+  .phase-box h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
 
-.card:hover{transform:translateY(-10px);}
+  .phase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 30px;
+    margin-top: 35px;
+  }
 
-.card h3{margin-top:15px;}
-.card p{margin-top:10px;font-size:.9rem;color:#555;}
+  .phase-item {
+    background: rgba(255,255,255,0.75);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    text-align: left;
+  }
 
-/* ================= FOOTER ================= */
-footer{
-  padding:40px 10%;
-  text-align:center;
-  font-size:.85rem;
-  color:#666;
-}
+  .phase-item h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+  }
 
-footer a{
-  color:var(--primary);
-  text-decoration:none;
-  margin:0 8px;
-}
+  .phase-item p {
+    margin-top: 14px;
+    font-size: .95rem;
+    color: var(--text-muted);
+  }
 
-/* ================= RESPONSIVE ================= */
-@media(max-width:900px){
-  .hero{min-height:auto;padding:40px 0;}
-  .phone-wrap{transform:scale(.9);}
-  .phase-grid{grid-template-columns:1fr;}
-}
-</style>
+  /* =====================================================
+     WHY BOOKMYAURA
+  ===================================================== */
+  .why-section {
+    padding: 110px 10%;
+  }
+
+  .why-section h2 {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 55px;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+    gap: 34px;
+  }
+
+  .why-card {
+    background: var(--glass);
+    backdrop-filter: blur(14px);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+    transition: transform .3s ease;
+  }
+
+  .why-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .why-card h4 {
+    margin-top: 14px;
+    font-size: 1.1rem;
+  }
+
+  .why-card p {
+    margin-top: 10px;
+    font-size: .9rem;
+    color: var(--text-muted);
+  }
+
+  /* =====================================================
+     FOOTER
+  ===================================================== */
+  footer {
+    padding: 45px 10%;
+    text-align: center;
+    font-size: .85rem;
+    color: #666;
+  }
+
+  footer a {
+    color: var(--primary);
+    margin: 0 8px;
+  }
+
+  /* =====================================================
+     RESPONSIVE
+  ===================================================== */
+  @media(max-width:900px){
+    .hero { padding-top: 30px; }
+    .device-stage { transform: scale(.88); }
+  }
+
+  </style>
 </head>
 
 <body>
 
-<!-- BRAND -->
-<div class="brand">
-  <h1>BookMyAura</h1>
-</div>
+  <!-- ================= BRAND ================= -->
+  <header class="brand-header">
+    <h1>BookMyAura</h1>
+    <p>Beauty & Wellness Booking Platform</p>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="phone-wrap">
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="device-stage">
 
-    <div class="screen left">
-      <img src="assets/app2.png">
-    </div>
-
-    <div class="screen center">
-      <img id="mainScreen" src="assets/app1.png">
-    </div>
-
-    <div class="screen right">
-      <img src="assets/app3.png">
-    </div>
-
-    <div class="phone"></div>
-
-  </div>
-</section>
-
-<!-- PHASE -->
-<section class="phase">
-  <div class="phase-box">
-    <h2>Platform Availability</h2>
-
-    <div class="phase-grid">
-      <div class="phase-item">
-        <h3>📱 Phase One — Android</h3>
-        <p>
-          BookMyAura is launching first on Android with full booking,
-          partner discovery, secure payments, and location-based services.
-          Early users will experience the complete core platform.
-        </p>
+      <div class="floating-screen screen-left">
+        <img src="assets/app2.png" alt="App preview">
       </div>
 
-      <div class="phase-item">
-        <h3>🍎 Phase Two — iOS</h3>
-        <p>
-          iOS support is under development with the same premium experience.
-          Advanced animations, performance tuning, and Apple ecosystem
-          integrations will follow shortly after Android launch.
-        </p>
+      <div class="floating-screen screen-center">
+        <img id="mainScreen" src="assets/app1.png" alt="App preview">
+      </div>
+
+      <div class="floating-screen screen-right">
+        <img src="assets/app3.png" alt="App preview">
+      </div>
+
+      <div class="phone-body"></div>
+
+    </div>
+  </section>
+
+  <!-- ================= PHASE ================= -->
+  <section class="phase-section">
+    <div class="phase-box">
+      <h2>Platform Rollout</h2>
+
+      <div class="phase-grid">
+        <div class="phase-item">
+          <h3>📱 Phase One — Android</h3>
+          <p>
+            Initial launch focuses on Android with full booking flow,
+            partner onboarding, secure UPI payments, and real-time
+            service discovery.
+          </p>
+        </div>
+
+        <div class="phase-item">
+          <h3>🍎 Phase Two — iOS</h3>
+          <p>
+            iOS version is under active development with the same
+            premium experience, optimised animations, and Apple-native
+            performance.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- WHY BOOKMYAURA (UNCHANGED) -->
-<section class="section">
-  <h2>Why BookMyAura</h2>
-  <div class="features">
-    <div class="card">
-      <h3>Verified Partners</h3>
-      <p>Only trusted and verified beauty & wellness businesses.</p>
-    </div>
-    <div class="card">
-      <h3>Instant Booking</h3>
-      <p>No calls, no waiting. Book in seconds.</p>
-    </div>
-    <div class="card">
-      <h3>Secure Payments</h3>
-      <p>UPI & secure payment integrations.</p>
-    </div>
-    <div class="card">
-      <h3>Nearby Discovery</h3>
-      <p>Find services around you with smart location matching.</p>
-    </div>
-  </div>
-</section>
+  <!-- ================= WHY ================= -->
+  <section class="why-section">
+    <h2>Why BookMyAura</h2>
 
-<footer>
-  <p>
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="delete-account.html">Delete Account</a> |
-    <a href="terms.html">Terms</a>
-  </p>
-  <p>© 2026 BookMyAura. All rights reserved.</p>
-</footer>
+    <div class="why-grid">
+      <div class="why-card">
+        <h4>Verified Partners</h4>
+        <p>Only trusted and verified beauty & wellness professionals.</p>
+      </div>
 
-<!-- 🔥 AUTO SLIDE -->
-<script>
-const screens=["assets/app1.png","assets/app2.png","assets/app3.png"];
-let i=0;
-const main=document.getElementById("mainScreen");
+      <div class="why-card">
+        <h4>Instant Booking</h4>
+        <p>No calls, no waiting — book in seconds.</p>
+      </div>
 
-setInterval(()=>{
-  main.style.opacity=0;
-  setTimeout(()=>{
-    i=(i+1)%screens.length;
-    main.src=screens[i];
-    main.style.opacity=1;
-  },500);
-},3500);
-</script>
+      <div class="why-card">
+        <h4>Secure Payments</h4>
+        <p>Safe and encrypted UPI & digital payments.</p>
+      </div>
+
+      <div class="why-card">
+        <h4>Nearby Discovery</h4>
+        <p>Smart location-based service matching.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="delete-account.html">Delete Account</a> |
+      <a href="terms.html">Terms</a>
+    </p>
+    <p>© 2026 BookMyAura. All rights reserved.</p>
+  </footer>
+
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    const screens = [
+      "assets/app1.png",
+      "assets/app2.png",
+      "assets/app3.png"
+    ];
+    let index = 0;
+    const main = document.getElementById("mainScreen");
+
+    setInterval(() => {
+      main.style.opacity = 0;
+      setTimeout(() => {
+        index = (index + 1) % screens.length;
+        main.src = screens[index];
+        main.style.opacity = 1;
+      }, 500);
+    }, 3500);
+  </script>
 
 </body>
 </html>
