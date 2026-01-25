@@ -4,13 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ================= SEO META ================= -->
 <title>BookMyAura | Beauty & Wellness Booking App</title>
 
-<meta name="description" content="BookMyAura helps you discover and book trusted salons, spas and wellness services near you. Instant booking, secure payments and verified partners." />
-
+<!-- SEO -->
+<meta name="description" content="BookMyAura lets you discover and book trusted salons, spas and wellness services near you. Instant booking, secure payments and verified partners." />
 <meta name="keywords" content="BookMyAura, salon booking app, spa booking, beauty services, wellness booking app, nearby salons, spa near me" />
-
 <meta name="author" content="BookMyAura" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://bookmyaura.in/" />
@@ -31,14 +29,12 @@
 <meta name="theme-color" content="#6a5cff" />
 <link rel="icon" href="assets/app1.png" type="image/png" />
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
   --primary:#6a5cff;
   --secondary:#b9b5ff;
-  --bg:#f6f5ff;
   --glass:rgba(255,255,255,.6);
   --dark:#1e1e2f;
 }
@@ -49,12 +45,13 @@ body{
   font-family:'Inter',sans-serif;
   background:radial-gradient(circle at top,#ebe9ff,#f6f5ff);
   color:var(--dark);
+  overflow-x:hidden;
 }
 
-/* ================= BRAND TOP ================= */
+/* ================= BRAND ================= */
 .brand-top{
   text-align:center;
-  padding:50px 10% 20px;
+  padding:50px 20px 10px;
 }
 
 .brand-top h1{
@@ -67,9 +64,8 @@ body{
 
 .brand-top p{
   margin-top:8px;
-  font-size:1rem;
+  font-size:1.05rem;
   color:#666;
-  letter-spacing:.3px;
 }
 
 /* ================= HERO ================= */
@@ -79,9 +75,24 @@ body{
   align-items:center;
   justify-content:space-between;
   padding:60px 10%;
+  position:relative;
 }
 
-.hero-content{max-width:520px}
+.hero::before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  background:radial-gradient(circle,var(--secondary),transparent 70%);
+  filter:blur(90px);
+  top:-120px;
+  right:-180px;
+}
+
+.hero-content{
+  max-width:520px;
+  z-index:2;
+}
 
 .hero h2{
   font-size:3rem;
@@ -91,26 +102,37 @@ body{
 .hero h2 span{color:var(--primary)}
 
 .hero p{
-  margin-top:18px;
+  margin-top:20px;
+  font-size:1.1rem;
   color:#555;
 }
 
 .hero-buttons{
-  margin-top:30px;
+  margin-top:35px;
   display:flex;
   gap:16px;
 }
 
+/* ================= BUTTONS ================= */
 .btn{
   padding:14px 26px;
   border-radius:14px;
   border:none;
   cursor:pointer;
+  font-size:.95rem;
+  position:relative;
+  transition:all .25s ease;
 }
 
 .btn-primary{
   background:linear-gradient(135deg,var(--primary),#857bff);
   color:#fff;
+  box-shadow:0 18px 40px rgba(106,92,255,.35);
+}
+
+.btn-primary:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:0 30px 70px rgba(106,92,255,.45);
 }
 
 .btn-outline{
@@ -119,13 +141,23 @@ body{
   color:var(--primary);
 }
 
+.btn-outline:hover{
+  background:rgba(106,92,255,.08);
+  transform:translateY(-3px);
+}
+
+.btn:active{
+  transform:scale(.96);
+}
+
 /* ================= PHONE ================= */
 .phone{
   width:280px;
   height:560px;
   border-radius:42px;
-  background:#fff;
+  background:linear-gradient(160deg,#fff,#f1f0ff);
   box-shadow:0 50px 90px rgba(0,0,0,.22);
+  position:relative;
   transform:perspective(1200px) rotateY(-12deg) rotateX(5deg);
   animation:float 5s ease-in-out infinite;
   overflow:hidden;
@@ -138,7 +170,7 @@ body{
   height:calc(100% - 28px);
   border-radius:28px;
   object-fit:cover;
-  transition:opacity .6s ease;
+  transition:opacity .6s ease,transform .6s ease;
 }
 
 @keyframes float{
@@ -153,19 +185,35 @@ body{
 }
 
 .platform-box{
-  max-width:700px;
+  max-width:720px;
   margin:auto;
   background:var(--glass);
   backdrop-filter:blur(14px);
-  border-radius:24px;
-  padding:40px;
+  border-radius:26px;
+  padding:45px;
+  box-shadow:0 30px 60px rgba(0,0,0,.1);
 }
 
-.platform-box h3{font-size:1.8rem}
+.platform-box h3{
+  font-size:1.9rem;
+  margin-bottom:20px;
+}
+
+.platform-box p{
+  font-size:1rem;
+  color:#555;
+  margin:12px 0;
+}
 
 /* ================= WHY ================= */
 .section{
   padding:100px 10%;
+}
+
+.section h2{
+  font-size:2.2rem;
+  margin-bottom:50px;
+  text-align:center;
 }
 
 .features{
@@ -176,16 +224,40 @@ body{
 
 .card{
   background:var(--glass);
+  backdrop-filter:blur(14px);
   border-radius:22px;
   padding:30px;
   text-align:center;
+  box-shadow:0 30px 60px rgba(0,0,0,.08);
+  transition:transform .3s ease;
 }
+
+.card:hover{transform:translateY(-10px)}
+
+.card h3{margin-top:15px}
+
+.card p{margin-top:10px;font-size:.9rem;color:#555}
 
 /* ================= FOOTER ================= */
 footer{
   padding:40px 10%;
   text-align:center;
   font-size:.85rem;
+  color:#666;
+}
+
+footer a{
+  color:var(--primary);
+  margin:0 8px;
+  text-decoration:none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .hero{flex-direction:column;text-align:center}
+  .hero-buttons{justify-content:center}
+  .phone{margin-top:50px}
+  .brand-top h1{font-size:2.6rem}
 }
 </style>
 </head>
@@ -210,7 +282,7 @@ footer{
   </div>
 
   <div class="phone">
-    <img id="appScreen" src="assets/app1.png">
+    <img id="appScreen" src="assets/app1.png" alt="BookMyAura App">
   </div>
 </section>
 
@@ -218,19 +290,31 @@ footer{
 <section class="platform">
   <div class="platform-box">
     <h3>Platform Availability</h3>
-    <p>📱 Android – Launching soon</p>
-    <p>🍎 iOS – Coming soon</p>
+    <p>📱 Phase 1: Android – launching soon with full booking experience</p>
+    <p>🍎 Phase 2: iOS – coming soon with premium performance</p>
   </div>
 </section>
 
 <!-- WHY -->
 <section class="section">
-  <h2 style="text-align:center">Why BookMyAura</h2>
+  <h2>Why BookMyAura</h2>
   <div class="features">
-    <div class="card"><h3>Verified Partners</h3><p>Trusted businesses only</p></div>
-    <div class="card"><h3>Instant Booking</h3><p>No calls needed</p></div>
-    <div class="card"><h3>Secure Payments</h3><p>UPI & encrypted</p></div>
-    <div class="card"><h3>Nearby Discovery</h3><p>Smart location</p></div>
+    <div class="card">
+      <h3>Verified Partners</h3>
+      <p>Only trusted and verified businesses.</p>
+    </div>
+    <div class="card">
+      <h3>Instant Booking</h3>
+      <p>No calls, no waiting.</p>
+    </div>
+    <div class="card">
+      <h3>Secure Payments</h3>
+      <p>UPI & encrypted payments.</p>
+    </div>
+    <div class="card">
+      <h3>Nearby Discovery</h3>
+      <p>Smart location matching.</p>
+    </div>
   </div>
 </section>
 
@@ -240,19 +324,22 @@ footer{
     <a href="delete-account.html">Delete Account</a> |
     <a href="terms.html">Terms</a>
   </p>
-  <p>© 2026 BookMyAura</p>
+  <p>© 2026 BookMyAura.All rights reserved</p>
 </footer>
 
 <script>
 const screens=["assets/app1.png","assets/app2.png","assets/app3.png"];
 let i=0;
 const img=document.getElementById("appScreen");
+
 setInterval(()=>{
   img.style.opacity=0;
+  img.style.transform="scale(.96)";
   setTimeout(()=>{
     i=(i+1)%screens.length;
     img.src=screens[i];
     img.style.opacity=1;
+    img.style.transform="scale(1)";
   },400);
 },3000);
 </script>
