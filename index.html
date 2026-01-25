@@ -1,421 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- =========================================================
-     BOOKMYAURA – OFFICIAL WEBSITE
-     Version: 1.0
-     Author: BookMyAura
-     Description: Beauty & Wellness Booking Platform
-========================================================= -->
-
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BookMyAura – Beauty & Wellness Booking</title>
 
-  <!-- ================= META ================= -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- SEO -->
-  <meta name="title" content="BookMyAura – Beauty & Wellness Booking Platform">
-  <meta name="description" content="Discover and book trusted salons, spas and wellness services near you. Instant booking, verified partners and secure payments.">
-  <meta name="keywords" content="salon booking, spa booking, beauty services, wellness, BookMyAura">
-  <meta name="author" content="BookMyAura">
+<style>
+:root {
+  --primary: #6a5cff;
+  --secondary: #b9b5ff;
+  --bg: #f6f5ff;
+  --glass: rgba(255,255,255,0.6);
+  --dark: #1e1e2f;
+}
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="BookMyAura">
-  <meta property="og:description" content="Beauty & Wellness Booking Platform">
-  <meta property="og:type" content="website">
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <title>BookMyAura – Beauty & Wellness Booking</title>
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #ebe9ff, #f6f5ff);
+  color: var(--dark);
+  overflow-x: hidden;
+}
 
-  <!-- ================= FONTS ================= -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+/* ================= BRAND TOP ================= */
+.brand-top {
+  text-align: center;
+  padding: 50px 10% 10px;
+}
 
-  <!-- ================= GLOBAL STYLES ================= -->
-  <style>
+.brand-top h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), #857bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  /* =====================================================
-     ROOT VARIABLES
-  ===================================================== */
-  :root {
-    --primary: #6a5cff;
-    --secondary: #b9b5ff;
-    --accent: #ff8bd8;
-    --bg-main: #f6f5ff;
-    --glass: rgba(255,255,255,0.65);
-    --dark: #1e1e2f;
-    --text-muted: #555;
-    --radius-lg: 28px;
-    --radius-md: 20px;
-    --radius-sm: 14px;
+/* ================= HERO ================= */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--secondary), transparent 70%);
+  filter: blur(90px);
+  top: -120px;
+  right: -180px;
+}
+
+.hero-content {
+  max-width: 520px;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero h2 span { color: var(--primary); }
+
+.hero p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.hero-buttons {
+  margin-top: 35px;
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 14px 26px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all .3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), #857bff);
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(106,92,255,.35);
+}
+
+.btn-primary:hover { transform: translateY(-3px); }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* ================= PHONE ================= */
+.phone {
+  width: 280px;
+  height: 560px;
+  border-radius: 42px;
+  background: linear-gradient(160deg, #ffffff, #f1f0ff);
+  box-shadow: 0 50px 90px rgba(0,0,0,0.22);
+  position: relative;
+  transform: perspective(1200px) rotateY(-12deg) rotateX(5deg);
+  animation: float 5s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.phone img {
+  position: absolute;
+  inset: 14px;
+  width: calc(100% - 28px);
+  height: calc(100% - 28px);
+  border-radius: 28px;
+  object-fit: cover;
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+@keyframes float {
+  0%,100% {
+    transform: perspective(1200px) rotateY(-12deg) rotateX(5deg);
   }
-
-  /* =====================================================
-     RESET
-  ===================================================== */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  50% {
+    transform: perspective(1200px) rotateY(-10deg) rotateX(4deg) translateY(-14px);
   }
+}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background:
-      radial-gradient(circle at top, #ebe9ff, #f6f5ff);
-    color: var(--dark);
-    overflow-x: hidden;
-    line-height: 1.6;
-  }
+/* ================= PLATFORM ================= */
+.platform {
+  padding: 80px 10%;
+  text-align: center;
+}
 
-  img {
-    max-width: 100%;
-    display: block;
-  }
+.platform-box {
+  max-width: 700px;
+  margin: auto;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+.platform-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
 
-  /* =====================================================
-     BRAND HEADER
-  ===================================================== */
-  .brand-header {
-    padding: 70px 10% 30px;
-    text-align: center;
-  }
+.platform-box p {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
 
-  .brand-header h1 {
-    font-size: 3.6rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+/* ================= WHY ================= */
+.section {
+  padding: 100px 10%;
+}
 
-  .brand-header p {
-    margin-top: 16px;
-    font-size: 1.05rem;
-    color: var(--text-muted);
-  }
+.section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
 
-  /* =====================================================
-     HERO SECTION
-  ===================================================== */
-  .hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    perspective: 1800px;
-    position: relative;
-  }
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 30px;
+}
 
-  /* =====================================================
-     PHONE + SCREEN COMPOSITION
-  ===================================================== */
-  .device-stage {
-    position: relative;
-    width: 380px;
-    height: 650px;
-  }
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  transition: transform .3s ease;
+}
 
-  /* ---------------- PHONE BODY ---------------- */
-  .phone-body {
-    position: absolute;
-    width: 280px;
-    height: 560px;
-    top: 40px;
-    left: 50px;
-    background: linear-gradient(160deg, #ffffff, #f1f0ff);
-    border-radius: 44px;
-    box-shadow: 0 60px 100px rgba(0,0,0,0.25);
-    transform: rotateY(-12deg) rotateX(6deg);
-    z-index: 3;
-  }
+.card:hover { transform: translateY(-10px); }
 
-  .phone-body::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90px;
-    height: 18px;
-    background: #000;
-    opacity: 0.08;
-    border-radius: 0 0 14px 14px;
-  }
+.card h3 { margin-top: 15px; }
 
-  /* ---------------- FLOATING SCREENS ---------------- */
-  .floating-screen {
-    position: absolute;
-    width: 230px;
-    height: 470px;
-    border-radius: 28px;
-    overflow: hidden;
-    background: #000;
-    box-shadow: 0 40px 90px rgba(0,0,0,0.35);
-    transition: transform 1s ease, opacity 1s ease;
-  }
+.card p { margin-top: 10px; font-size: .9rem; color: #555; }
 
-  .floating-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+/* ================= FOOTER ================= */
+footer {
+  padding: 40px 10%;
+  text-align: center;
+  font-size: .85rem;
+  color: #666;
+}
 
-  .screen-left {
-    top: 120px;
-    left: -90px;
-    transform: rotateY(28deg) rotateZ(-6deg) translateZ(60px);
-    z-index: 1;
-  }
+footer a {
+  color: var(--primary);
+  margin: 0 8px;
+}
 
-  .screen-center {
-    top: 70px;
-    left: 80px;
-    transform: translateZ(140px);
-    z-index: 4;
-  }
-
-  .screen-right {
-    top: 130px;
-    left: 240px;
-    transform: rotateY(-28deg) rotateZ(6deg) translateZ(40px);
-    z-index: 1;
-  }
-
-  /* =====================================================
-     PHASE SECTION
-  ===================================================== */
-  .phase-section {
-    padding: 90px 10% 60px;
-    text-align: center;
-  }
-
-  .phase-box {
-    max-width: 900px;
-    margin: auto;
-    background: var(--glass);
-    backdrop-filter: blur(18px);
-    border-radius: var(--radius-lg);
-    padding: 50px;
-    box-shadow: 0 40px 90px rgba(0,0,0,0.1);
-  }
-
-  .phase-box h2 {
-    font-size: 2rem;
-    margin-bottom: 25px;
-  }
-
-  .phase-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-    gap: 30px;
-    margin-top: 35px;
-  }
-
-  .phase-item {
-    background: rgba(255,255,255,0.75);
-    border-radius: var(--radius-md);
-    padding: 30px;
-    text-align: left;
-  }
-
-  .phase-item h3 {
-    font-size: 1.2rem;
-    color: var(--primary);
-  }
-
-  .phase-item p {
-    margin-top: 14px;
-    font-size: .95rem;
-    color: var(--text-muted);
-  }
-
-  /* =====================================================
-     WHY BOOKMYAURA
-  ===================================================== */
-  .why-section {
-    padding: 110px 10%;
-  }
-
-  .why-section h2 {
-    text-align: center;
-    font-size: 2.3rem;
-    margin-bottom: 55px;
-  }
-
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
-    gap: 34px;
-  }
-
-  .why-card {
-    background: var(--glass);
-    backdrop-filter: blur(14px);
-    border-radius: var(--radius-md);
-    padding: 32px;
-    text-align: center;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-    transition: transform .3s ease;
-  }
-
-  .why-card:hover {
-    transform: translateY(-10px);
-  }
-
-  .why-card h4 {
-    margin-top: 14px;
-    font-size: 1.1rem;
-  }
-
-  .why-card p {
-    margin-top: 10px;
-    font-size: .9rem;
-    color: var(--text-muted);
-  }
-
-  /* =====================================================
-     FOOTER
-  ===================================================== */
-  footer {
-    padding: 45px 10%;
-    text-align: center;
-    font-size: .85rem;
-    color: #666;
-  }
-
-  footer a {
-    color: var(--primary);
-    margin: 0 8px;
-  }
-
-  /* =====================================================
-     RESPONSIVE
-  ===================================================== */
-  @media(max-width:900px){
-    .hero { padding-top: 30px; }
-    .device-stage { transform: scale(.88); }
-  }
-
-  </style>
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-buttons { justify-content: center; }
+  .phone { margin-top: 50px; }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- ================= BRAND ================= -->
-  <header class="brand-header">
-    <h1>BookMyAura</h1>
-    <p>Beauty & Wellness Booking Platform</p>
-  </header>
+<!-- TOP BRAND -->
+<div class="brand-top">
+  <h1>BookMyAura</h1>
+</div>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="device-stage">
-
-      <div class="floating-screen screen-left">
-        <img src="assets/app2.png" alt="App preview">
-      </div>
-
-      <div class="floating-screen screen-center">
-        <img id="mainScreen" src="assets/app1.png" alt="App preview">
-      </div>
-
-      <div class="floating-screen screen-right">
-        <img src="assets/app3.png" alt="App preview">
-      </div>
-
-      <div class="phone-body"></div>
-
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Book Beauty & Wellness <span>Instantly</span></h2>
+    <p>Discover trusted salons, spas and wellness services near you.</p>
+    <div class="hero-buttons">
+      <button class="btn btn-primary">Get the App</button>
+      <button class="btn btn-outline">Become a Partner</button>
     </div>
-  </section>
+  </div>
 
-  <!-- ================= PHASE ================= -->
-  <section class="phase-section">
-    <div class="phase-box">
-      <h2>Platform Rollout</h2>
+  <div class="phone">
+    <img id="appScreen" src="assets/app1.png">
+  </div>
+</section>
 
-      <div class="phase-grid">
-        <div class="phase-item">
-          <h3>📱 Phase One — Android</h3>
-          <p>
-            Initial launch focuses on Android with full booking flow,
-            partner onboarding, secure UPI payments, and real-time
-            service discovery.
-          </p>
-        </div>
+<!-- PLATFORM -->
+<section class="platform">
+  <div class="platform-box">
+    <h3>Platform Availability</h3>
+    <p>📱 Android app launching soon with full booking experience</p>
+    <p>🍎 iOS version coming soon with premium performance</p>
+  </div>
+</section>
 
-        <div class="phase-item">
-          <h3>🍎 Phase Two — iOS</h3>
-          <p>
-            iOS version is under active development with the same
-            premium experience, optimised animations, and Apple-native
-            performance.
-          </p>
-        </div>
-      </div>
+<!-- WHY -->
+<section class="section">
+  <h2>Why BookMyAura</h2>
+  <div class="features">
+    <div class="card">
+      <h3>Verified Partners</h3>
+      <p>Only trusted and verified businesses.</p>
     </div>
-  </section>
-
-  <!-- ================= WHY ================= -->
-  <section class="why-section">
-    <h2>Why BookMyAura</h2>
-
-    <div class="why-grid">
-      <div class="why-card">
-        <h4>Verified Partners</h4>
-        <p>Only trusted and verified beauty & wellness professionals.</p>
-      </div>
-
-      <div class="why-card">
-        <h4>Instant Booking</h4>
-        <p>No calls, no waiting — book in seconds.</p>
-      </div>
-
-      <div class="why-card">
-        <h4>Secure Payments</h4>
-        <p>Safe and encrypted UPI & digital payments.</p>
-      </div>
-
-      <div class="why-card">
-        <h4>Nearby Discovery</h4>
-        <p>Smart location-based service matching.</p>
-      </div>
+    <div class="card">
+      <h3>Instant Booking</h3>
+      <p>No calls, no waiting.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>Secure Payments</h3>
+      <p>UPI & encrypted payments.</p>
+    </div>
+    <div class="card">
+      <h3>Nearby Discovery</h3>
+      <p>Smart location matching.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    <p>
-      <a href="privacy-policy.html">Privacy Policy</a> |
-      <a href="delete-account.html">Delete Account</a> |
-      <a href="terms.html">Terms</a>
-    </p>
-    <p>© 2026 BookMyAura. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="delete-account.html">Delete Account</a> |
+    <a href="terms.html">Terms</a>
+  </p>
+  <p>© 2026 BookMyAura</p>
+</footer>
 
-  <!-- ================= SCRIPT ================= -->
-  <script>
-    const screens = [
-      "assets/app1.png",
-      "assets/app2.png",
-      "assets/app3.png"
-    ];
-    let index = 0;
-    const main = document.getElementById("mainScreen");
+<script>
+const screens = ["assets/app1.png","assets/app2.png","assets/app3.png"];
+let i = 0;
+const img = document.getElementById("appScreen");
 
-    setInterval(() => {
-      main.style.opacity = 0;
-      setTimeout(() => {
-        index = (index + 1) % screens.length;
-        main.src = screens[index];
-        main.style.opacity = 1;
-      }, 500);
-    }, 3500);
-  </script>
+setInterval(() => {
+  img.style.opacity = 0;
+  setTimeout(() => {
+    i = (i + 1) % screens.length;
+    img.src = screens[i];
+    img.style.opacity = 1;
+  }, 400);
+}, 3000);
+</script>
 
 </body>
 </html>
