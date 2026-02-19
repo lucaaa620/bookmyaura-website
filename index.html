@@ -4,48 +4,19 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ================= SEO ================= -->
 <title>Book Beauty & Wellness Services Near You | BookMyAura App India</title>
 
-<meta name="description" content="BookMyAura is India's trusted beauty & wellness booking app. Discover nearby salons, spas and wellness services. Instant booking, secure payments and verified partners." />
-<meta name="keywords" content="beauty booking app India, salon booking app, spa near me, wellness services app, BookMyAura, nearby salon booking" />
-<meta name="author" content="BookMyAura" />
+<meta name="description" content="BookMyAura is India's trusted beauty & wellness booking app. Discover nearby salons, spas and wellness services with instant booking and secure payments." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://bookmyaura.in/" />
 
-<!-- Open Graph -->
 <meta property="og:title" content="BookMyAura – Beauty & Wellness Booking App" />
-<meta property="og:description" content="Discover and book trusted salons, spas and wellness services near you instantly." />
+<meta property="og:description" content="Book trusted salons, spas and wellness services near you instantly." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bookmyaura.in/" />
 <meta property="og:image" content="https://bookmyaura.in/assets/app1.png" />
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="BookMyAura – Beauty Booking App India" />
-<meta name="twitter:description" content="Book nearby salons & spas instantly with secure payments." />
-<meta name="twitter:image" content="https://bookmyaura.in/assets/app1.png" />
 
 <meta name="theme-color" content="#6a5cff" />
 <link rel="icon" href="assets/app1.png" type="image/png" />
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MobileApplication",
-  "name": "BookMyAura",
-  "operatingSystem": "Android",
-  "applicationCategory": "LifestyleApplication",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "INR"
-  },
-  "url": "https://bookmyaura.in",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.bookmyaura"
-}
-</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -53,11 +24,11 @@
 :root {
   --primary:#6a5cff;
   --secondary:#b9b5ff;
-  --dark:#1e1e2f;
   --glass:rgba(255,255,255,.6);
+  --dark:#1e1e2f;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
   font-family:'Inter',sans-serif;
@@ -66,30 +37,42 @@ body{
   overflow-x:hidden;
 }
 
-/* Brand */
+/* BRAND */
 .brand-top{
   text-align:center;
-  padding:50px 20px 20px;
+  padding:50px 20px 10px;
 }
 .brand-top h1{
   font-size:2.4rem;
   font-weight:700;
 }
 .brand-top p{
-  margin-top:10px;
-  color:#555;
+  margin-top:8px;
+  color:#666;
 }
 
-/* Hero */
+/* HERO */
 .hero{
   min-height:90vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding:60px 10%;
-  gap:40px;
+  position:relative;
 }
-.hero-content{max-width:520px}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  background:radial-gradient(circle,var(--secondary),transparent 70%);
+  filter:blur(90px);
+  top:-120px;
+  right:-180px;
+}
+
+.hero-content{max-width:520px;z-index:2}
 .hero h2{font-size:2.8rem;font-weight:700}
 .hero h2 span{color:var(--primary)}
 .hero p{margin-top:20px;font-size:1.1rem;color:#555}
@@ -97,107 +80,103 @@ body{
 .hero-buttons{
   margin-top:35px;
   display:flex;
-  gap:18px;
+  gap:16px;
 }
 
 .btn{
-  padding:14px 28px;
+  padding:14px 26px;
   border-radius:14px;
   text-decoration:none;
-  font-weight:600;
-  transition:.3s ease;
+  font-size:.95rem;
+  transition:.25s ease;
 }
+
 .btn-primary{
   background:linear-gradient(135deg,var(--primary),#857bff);
   color:#fff;
-  box-shadow:0 20px 40px rgba(106,92,255,.35);
+  box-shadow:0 18px 40px rgba(106,92,255,.35);
+}
+.btn-primary:hover{
+  transform:translateY(-4px) scale(1.03);
 }
 .btn-outline{
   border:1px solid var(--primary);
   color:var(--primary);
 }
-.btn:hover{
-  transform:translateY(-5px);
+.btn-outline:hover{
+  background:rgba(106,92,255,.08);
+  transform:translateY(-3px);
 }
 
-/* Phone Animation */
+/* PERFECT OLD PHONE DESIGN */
 .phone{
   width:280px;
   height:560px;
   border-radius:42px;
-  background:#fff;
+  background:linear-gradient(160deg,#fff,#f1f0ff);
   box-shadow:0 50px 90px rgba(0,0,0,.22);
-  overflow:hidden;
+  position:relative;
+  transform:perspective(1200px) rotateY(-12deg) rotateX(5deg);
   animation:float 5s ease-in-out infinite;
-}
-.phone img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:opacity .6s ease;
-}
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-15px)}
+  overflow:hidden;
 }
 
-/* Platform */
+.phone img{
+  position:absolute;
+  inset:14px;
+  width:calc(100% - 28px);
+  height:calc(100% - 28px);
+  border-radius:28px;
+  object-fit:cover;
+  transition:opacity .6s ease,transform .6s ease;
+}
+
+@keyframes float{
+  0%,100%{transform:perspective(1200px) rotateY(-12deg) rotateX(5deg)}
+  50%{transform:perspective(1200px) rotateY(-10deg) rotateX(4deg) translateY(-14px)}
+}
+
+/* PLATFORM */
 .platform{
   padding:80px 10%;
   text-align:center;
 }
 .platform-box{
-  background:var(--glass);
-  backdrop-filter:blur(12px);
-  border-radius:24px;
-  padding:45px;
-  max-width:750px;
+  max-width:720px;
   margin:auto;
+  background:var(--glass);
+  backdrop-filter:blur(14px);
+  border-radius:26px;
+  padding:45px;
   box-shadow:0 30px 60px rgba(0,0,0,.1);
 }
-.platform-box h3{
-  font-size:1.8rem;
-  margin-bottom:30px;
-}
-
 .store-links{
   display:flex;
   justify-content:center;
   gap:20px;
   flex-wrap:wrap;
+  margin-top:20px;
 }
 .store-btn{
   display:flex;
   align-items:center;
-  gap:12px;
-  padding:12px 24px;
+  gap:10px;
+  padding:12px 22px;
   background:#000;
   color:#fff;
   border-radius:14px;
   text-decoration:none;
-  transition:.3s ease;
 }
-.store-btn img{
-  width:24px;
-}
-.store-btn:hover{
-  transform:translateY(-5px);
-}
+.store-btn img{width:22px}
 .store-btn.disabled{
   background:#333;
   opacity:.7;
   cursor:not-allowed;
 }
 
-/* Features */
-.section{
-  padding:100px 10%;
-}
-.section h2{
-  text-align:center;
-  margin-bottom:60px;
-  font-size:2rem;
-}
+/* FEATURES */
+.section{padding:100px 10%}
+.section h2{text-align:center;margin-bottom:50px}
 .features{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -205,19 +184,12 @@ body{
 }
 .card{
   background:var(--glass);
-  border-radius:20px;
+  border-radius:22px;
   padding:30px;
   text-align:center;
-  box-shadow:0 25px 50px rgba(0,0,0,.08);
-  transition:.3s ease;
+  box-shadow:0 30px 60px rgba(0,0,0,.08);
 }
-.card:hover{
-  transform:translateY(-8px);
-}
-.card h3{margin-top:10px}
-.card p{margin-top:10px;color:#555}
 
-/* Footer */
 footer{
   padding:40px 10%;
   text-align:center;
@@ -226,14 +198,14 @@ footer{
 }
 footer a{
   color:var(--primary);
-  text-decoration:none;
   margin:0 8px;
+  text-decoration:none;
 }
 
-/* Responsive */
 @media(max-width:900px){
   .hero{flex-direction:column;text-align:center}
   .hero-buttons{justify-content:center}
+  .phone{margin-top:50px}
 }
 </style>
 </head>
@@ -248,13 +220,15 @@ footer a{
 <section class="hero">
   <div class="hero-content">
     <h2>Book Beauty & Wellness <span>Instantly</span></h2>
-    <p>Discover trusted salons, spas and wellness services near you with instant booking and secure payments.</p>
+    <p>Discover trusted salons, spas and wellness services near you.</p>
+
     <div class="hero-buttons">
       <a href="https://play.google.com/store/apps/details?id=com.bookmyaura"
          target="_blank"
          class="btn btn-primary">
          Get the App
       </a>
+
       <a href="https://play.google.com/store/apps/details?id=com.bookmyaura"
          target="_blank"
          class="btn btn-outline">
@@ -264,7 +238,7 @@ footer a{
   </div>
 
   <div class="phone">
-    <img id="appScreen" src="assets/app1.png" alt="BookMyAura Beauty Booking App Screenshot">
+    <img id="appScreen" src="assets/app1.png" alt="BookMyAura App">
   </div>
 </section>
 
@@ -275,12 +249,12 @@ footer a{
       <a href="https://play.google.com/store/apps/details?id=com.bookmyaura"
          target="_blank"
          class="store-btn">
-         <img src="assets/playstore.png" alt="Google Play Store">
+         <img src="assets/playstore.png">
          <span>Google Play</span>
       </a>
 
       <div class="store-btn disabled">
-         <img src="assets/appstore.png" alt="Apple App Store">
+         <img src="assets/appstore.png">
          <span>App Store (Coming Soon)</span>
       </div>
     </div>
@@ -288,23 +262,23 @@ footer a{
 </section>
 
 <section class="section">
-  <h2>Why Choose BookMyAura</h2>
+  <h2>Why BookMyAura</h2>
   <div class="features">
     <div class="card">
       <h3>Verified Partners</h3>
-      <p>Book only trusted and verified salons and wellness experts.</p>
+      <p>Only trusted and verified businesses.</p>
     </div>
     <div class="card">
       <h3>Instant Booking</h3>
-      <p>Skip calls and confirm appointments instantly.</p>
+      <p>No calls, no waiting.</p>
     </div>
     <div class="card">
       <h3>Secure Payments</h3>
-      <p>UPI and encrypted online payment system.</p>
+      <p>UPI & encrypted payments.</p>
     </div>
     <div class="card">
       <h3>Nearby Discovery</h3>
-      <p>Find salons, spas and beauty services near your location.</p>
+      <p>Smart location matching.</p>
     </div>
   </div>
 </section>
@@ -325,10 +299,12 @@ const img=document.getElementById("appScreen");
 
 setInterval(()=>{
   img.style.opacity=0;
+  img.style.transform="scale(.96)";
   setTimeout(()=>{
     i=(i+1)%screens.length;
     img.src=screens[i];
     img.style.opacity=1;
+    img.style.transform="scale(1)";
   },400);
 },3000);
 </script>
