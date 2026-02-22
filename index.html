@@ -18,107 +18,77 @@
 <meta name="theme-color" content="#6a5cff" />
 <link rel="icon" href="assets/app1.png" type="image/png" />
 
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XR2TKGJJRW"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XR2TKGJJRW');
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* ====== SAME ORIGINAL STYLE (UNCHANGED) ====== */
 :root {
   --primary:#6a5cff;
   --secondary:#b9b5ff;
   --glass:rgba(255,255,255,.6);
   --dark:#1e1e2f;
 }
-
 *{box-sizing:border-box;margin:0;padding:0}
-
 body{
   font-family:'Inter',sans-serif;
   background:radial-gradient(circle at top,#ebe9ff,#f6f5ff);
   color:var(--dark);
   overflow-x:hidden;
 }
-
-/* BRAND */
-.brand-top{
-  text-align:center;
-  padding:50px 20px 10px;
-}
+.brand-top{text-align:center;padding:50px 20px 10px}
 .brand-top h1{
-  font-size:3rem;
-  font-weight:700;
+  font-size:3rem;font-weight:700;
   background:linear-gradient(135deg,var(--primary),#857bff);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 .brand-top .tagline{
-  margin-top:12px;
-  font-size:1.1rem;
-  letter-spacing:1px;
-  color:#555;
-  font-weight:500;
-  opacity:.9;
+  margin-top:12px;font-size:1.1rem;letter-spacing:1px;
+  color:#555;font-weight:500;opacity:.9;
 }
-
-/* HERO */
 .hero{
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:60px 10%;
+  min-height:90vh;display:flex;align-items:center;
+  justify-content:space-between;padding:60px 10%;
   position:relative;
 }
 .hero::before{
-  content:"";
-  position:absolute;
-  width:520px;
-  height:520px;
+  content:"";position:absolute;width:520px;height:520px;
   background:radial-gradient(circle,var(--secondary),transparent 70%);
-  filter:blur(90px);
-  top:-120px;
-  right:-180px;
+  filter:blur(90px);top:-120px;right:-180px;
 }
 .hero-content{max-width:520px;z-index:2}
 .hero h2{font-size:2.8rem;font-weight:700}
 .hero h2 span{color:var(--primary)}
 .hero p{margin-top:20px;font-size:1.1rem;color:#555}
-
-.hero-buttons{
-  margin-top:35px;
-  display:flex;
-  gap:16px;
-}
-
-/* BUTTONS */
+.hero-buttons{margin-top:35px;display:flex;gap:16px}
 .btn{
-  padding:14px 26px;
-  border-radius:14px;
-  text-decoration:none;
-  font-size:.95rem;
-  transition:all .3s ease;
+  padding:14px 26px;border-radius:14px;text-decoration:none;
+  font-size:.95rem;transition:all .3s ease;
 }
 .btn-primary{
   background:linear-gradient(135deg,var(--primary),#857bff);
-  color:#fff;
-  box-shadow:0 18px 40px rgba(106,92,255,.35);
+  color:#fff;box-shadow:0 18px 40px rgba(106,92,255,.35);
 }
 .btn-primary:hover{
   transform:translateY(-4px) scale(1.05);
   box-shadow:0 30px 70px rgba(106,92,255,.45);
 }
-.btn-outline{
-  border:1px solid var(--primary);
-  color:var(--primary);
-}
+.btn-outline{border:1px solid var(--primary);color:var(--primary)}
 .btn-outline:hover{
   background:rgba(106,92,255,.08);
   transform:translateY(-3px);
 }
-
-/* PHONE (Perfect Old Design) */
 .phone{
-  width:280px;
-  height:560px;
-  border-radius:42px;
+  width:280px;height:560px;border-radius:42px;
   background:linear-gradient(160deg,#fff,#f1f0ff);
   box-shadow:0 50px 90px rgba(0,0,0,.22);
   position:relative;
@@ -127,8 +97,7 @@ body{
   overflow:hidden;
 }
 .phone img{
-  position:absolute;
-  inset:14px;
+  position:absolute;inset:14px;
   width:calc(100% - 28px);
   height:calc(100% - 28px);
   border-radius:28px;
@@ -139,53 +108,26 @@ body{
   0%,100%{transform:perspective(1200px) rotateY(-12deg) rotateX(5deg)}
   50%{transform:perspective(1200px) rotateY(-10deg) rotateX(4deg) translateY(-14px)}
 }
-
-/* PLATFORM */
-.platform{
-  padding:80px 10%;
-  text-align:center;
-}
+.platform{padding:80px 10%;text-align:center}
 .platform-box{
-  max-width:720px;
-  margin:auto;
-  background:var(--glass);
-  backdrop-filter:blur(14px);
-  border-radius:26px;
-  padding:45px;
-  box-shadow:0 30px 60px rgba(0,0,0,.1);
+  max-width:720px;margin:auto;background:var(--glass);
+  backdrop-filter:blur(14px);border-radius:26px;
+  padding:45px;box-shadow:0 30px 60px rgba(0,0,0,.1);
   transition:transform .4s ease;
 }
-.platform-box:hover{
-  transform:translateY(-8px);
-}
+.platform-box:hover{transform:translateY(-8px)}
 .store-links{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-  margin-top:20px;
+  display:flex;justify-content:center;gap:20px;
+  flex-wrap:wrap;margin-top:20px;
 }
 .store-btn{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:12px 22px;
-  background:#000;
-  color:#fff;
-  border-radius:14px;
-  text-decoration:none;
-  transition:.3s ease;
+  display:flex;align-items:center;gap:10px;
+  padding:12px 22px;background:#000;color:#fff;
+  border-radius:14px;text-decoration:none;transition:.3s ease;
 }
-.store-btn:hover{
-  transform:translateY(-5px) scale(1.05);
-}
+.store-btn:hover{transform:translateY(-5px) scale(1.05)}
 .store-btn img{width:22px}
-.store-btn.disabled{
-  background:#333;
-  opacity:.7;
-}
-
-/* FEATURES */
+.store-btn.disabled{background:#333;opacity:.7}
 .section{padding:100px 10%}
 .section h2{text-align:center;margin-bottom:50px}
 .features{
@@ -195,29 +137,15 @@ body{
 }
 .card{
   background:var(--glass);
-  border-radius:22px;
-  padding:30px;
-  text-align:center;
+  border-radius:22px;padding:30px;text-align:center;
   box-shadow:0 30px 60px rgba(0,0,0,.08);
   transition:all .4s ease;
 }
-.card:hover{
-  transform:translateY(-12px) scale(1.03);
-}
-
-/* FOOTER */
+.card:hover{transform:translateY(-12px) scale(1.03)}
 footer{
-  padding:40px 10%;
-  text-align:center;
-  font-size:.85rem;
-  color:#666;
+  padding:40px 10%;text-align:center;font-size:.85rem;color:#666;
 }
-footer a{
-  color:var(--primary);
-  margin:0 8px;
-  text-decoration:none;
-}
-
+footer a{color:var(--primary);margin:0 8px;text-decoration:none}
 @media(max-width:900px){
   .hero{flex-direction:column;text-align:center}
   .hero-buttons{justify-content:center}
@@ -241,13 +169,15 @@ footer a{
     <div class="hero-buttons">
       <a href="https://play.google.com/store/apps/details?id=com.bookmyaura"
          target="_blank"
-         class="btn btn-primary">
+         class="btn btn-primary"
+         id="mainPlayBtn">
          Get the App
       </a>
 
       <a href="https://play.google.com/store/apps/details?id=com.bookmyaura"
          target="_blank"
-         class="btn btn-outline">
+         class="btn btn-outline"
+         id="partnerBtn">
          Become a Partner
       </a>
     </div>
@@ -264,10 +194,20 @@ footer a{
     <div class="store-links">
       <a href="https://play.google.com/store/apps/details?id=com.bookmyaura"
          target="_blank"
-         class="store-btn">
+         class="store-btn"
+         id="storePlayBtn">
          <img src="assets/playstore.png">
          <span>Google Play</span>
       </a>
+
+      <a href="https://www.instagram.com/bookmyaura"
+         target="_blank"
+         class="store-btn"
+         style="background:#E1306C"
+         id="instagramBtn">
+         <span>Instagram</span>
+      </a>
+
       <div class="store-btn disabled">
          <img src="assets/appstore.png">
          <span>App Store (Coming Soon)</span>
@@ -308,10 +248,10 @@ footer a{
 </footer>
 
 <script>
+/* ORIGINAL PHONE ANIMATION */
 const screens=["assets/app1.png","assets/app2.png","assets/app3.png"];
 let i=0;
 const img=document.getElementById("appScreen");
-
 setInterval(()=>{
   img.style.opacity=0;
   img.style.transform="scale(.96)";
@@ -322,6 +262,29 @@ setInterval(()=>{
     img.style.transform="scale(1)";
   },400);
 },3000);
+
+/* TRACKING */
+document.getElementById("mainPlayBtn").addEventListener("click",()=> {
+  gtag('event','homepage_play_click');
+});
+document.getElementById("partnerBtn").addEventListener("click",()=> {
+  gtag('event','homepage_partner_click');
+});
+document.getElementById("storePlayBtn").addEventListener("click",()=> {
+  gtag('event','store_play_click');
+});
+document.getElementById("instagramBtn").addEventListener("click",()=> {
+  gtag('event','instagram_click');
+});
+
+/* Scroll tracking */
+let scrollTracked=false;
+window.addEventListener("scroll",()=>{
+  if(!scrollTracked && window.scrollY>600){
+    scrollTracked=true;
+    gtag('event','scroll_engagement');
+  }
+});
 </script>
 
 </body>
