@@ -1,267 +1,1061 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>How Online Salon Booking is Reshaping the Indian Beauty Industry in 2026 | BookMyAura</title>
+<title>BookMyAura Blog | Beauty, Salon & Wellness Insights</title>
 
-<meta name="description" content="Explore how online salon booking platforms like BookMyAura are transforming the Indian beauty industry in 2026. Learn about digital adoption, customer behavior, revenue growth, and the future of salon businesses in India.">
+<meta name="description" content="Explore BookMyAura insights on salon booking, beauty trends, digital transformation, customer experience and the future of the Indian beauty and wellness industry.">
 
-<meta name="keywords" content="online salon booking India, salon booking app, beauty industry India 2026, digital salon management, BookMyAura app">
+<meta name="keywords" content="BookMyAura blog, salon booking India, beauty industry India, salon business tips, beauty trends, digital salon booking">
+
+<meta name="author" content="BookMyAura">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://bookmyaura.in/blog/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="BookMyAura Blog | Beauty, Salon & Wellness Insights">
+<meta property="og:description" content="Insights, trends and ideas shaping the future of beauty, salon and wellness services in India.">
+<meta property="og:url" content="https://bookmyaura.in/blog/">
+<meta property="og:site_name" content="BookMyAura">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XR2TKGJJRW"></script>
+
 <script>
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
 gtag('js', new Date());
 gtag('config', 'G-XR2TKGJJRW');
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 
 <style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    margin:0;
-    font-family:'Poppins', sans-serif;
-    background:#f8f9fb;
-    color:#222;
-    line-height:1.9;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f7f7f8;
+    color: #111;
 }
+
+
+/* =========================
+   HEADER
+========================= */
+
 header {
-    background:#000;
-    color:#fff;
-    padding:20px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-header h1 { margin:0; font-size:20px; }
-header a { color:#fff; text-decoration:none; font-weight:500; }
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-.container {
-    max-width:950px;
-    margin:60px auto;
-    padding:0 20px;
+    height: 72px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(0,0,0,0.96);
+    backdrop-filter: blur(12px);
+
+    color: #fff;
 }
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+}
+
+.logo span {
+    color: #aaa;
+}
+
+.home-btn {
+    color: #fff;
+    text-decoration: none;
+
+    padding: 9px 20px;
+
+    border: 1px solid #444;
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.home-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    background: #000;
+    color: #fff;
+
+    padding: 105px 20px 125px;
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -150px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.04);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    bottom: -180px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.035);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 950px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.hero-label {
+    margin-bottom: 22px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #999;
+}
+
+.hero h1 {
+    margin: 0 auto 25px;
+
+    max-width: 900px;
+
+    font-size: clamp(40px, 6vw, 72px);
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    font-weight: 700;
+}
+
+.hero p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #aaa;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BLOG SECTION
+========================= */
+
+.blog-section {
+    max-width: 1150px;
+
+    margin: -55px auto 100px;
+
+    padding: 0 25px;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =========================
+   FEATURED ARTICLE
+========================= */
+
+.featured-card {
+    display: grid;
+
+    grid-template-columns: 1.15fr 1fr;
+
+    min-height: 390px;
+
+    background: #fff;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow: 0 25px 70px rgba(0,0,0,0.08);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 35px 80px rgba(0,0,0,0.12);
+}
+
+
+/* Featured Visual */
+
+.featured-visual {
+    position: relative;
+
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at 30% 30%, #333 0%, #111 45%, #000 100%);
+
+    overflow: hidden;
+}
+
+.featured-visual::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50%;
+}
+
+.featured-visual::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    border-radius: 50%;
+}
+
+.visual-text {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+.visual-text small {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #888;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.visual-text strong {
+    display: block;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+/* Featured Content */
+
+.featured-content {
+    padding: 55px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article-category {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 7px 13px;
+
+    background: #f1f1f1;
+
+    border-radius: 20px;
+
+    color: #555;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.featured-content h2 {
+    margin: 20px 0 18px;
+
+    font-size: 32px;
+
+    line-height: 1.25;
+
+    letter-spacing: -1px;
+}
+
+.featured-content p {
+    margin: 0 0 25px;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.article-meta {
+    margin-bottom: 25px;
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+.read-btn {
+    display: inline-flex;
+
+    width: fit-content;
+
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 22px;
+
+    background: #000;
+    color: #fff;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.read-btn:hover {
+    background: #333;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-heading {
+    margin: 85px 0 30px;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: 30px;
+
+    letter-spacing: -0.8px;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FUTURE BLOG CARDS
+========================= */
+
+.blog-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
 .blog-card {
-    background:#fff;
-    padding:60px;
-    border-radius:16px;
-    box-shadow:0 20px 60px rgba(0,0,0,0.05);
-}
-.blog-card h2 { font-size:34px; margin-top:0; }
-.blog-card h3 { margin-top:45px; font-size:24px; }
-.blog-card h4 { margin-top:30px; font-size:19px; }
-.blog-card ul { padding-left:22px; }
-.blog-card p { margin-top:15px; }
+    background: #fff;
 
-.cta-section {
-    margin-top:60px;
-    padding-top:40px;
-    border-top:1px solid #eee;
-    text-align:center;
-}
-.cta-button {
-    display:inline-block;
-    background:#000;
-    color:#fff;
-    padding:16px 34px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:600;
-    margin-top:25px;
-    transition:0.3s;
-}
-.cta-button:hover { background:#333; }
+    border-radius: 16px;
 
-.social-link {
-    display:block;
-    margin-top:25px;
-    font-weight:600;
-    text-decoration:none;
-    color:#000;
+    overflow: hidden;
+
+    border: 1px solid #eee;
+
+    transition: 0.3s ease;
 }
+
+.blog-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.07);
+}
+
+.card-visual {
+    height: 180px;
+
+    background: #111;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    margin: 12px 0;
+
+    font-size: 19px;
+
+    line-height: 1.4;
+}
+
+.card-content p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.coming-soon {
+    display: inline-block;
+
+    color: #999;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    margin-top: 85px;
+
+    padding: 65px 30px;
+
+    background: #000;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+.cta h2 {
+    margin: 0 0 12px;
+
+    font-size: 32px;
+
+    letter-spacing: -0.8px;
+}
+
+.cta p {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.cta-btn {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 14px 28px;
+
+    background: #fff;
+    color: #000;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #ddd;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
-    text-align:center;
-    padding:35px;
-    margin-top:70px;
-    font-size:14px;
-    color:#777;
+    padding: 40px 20px;
+
+    background: #000;
+
+    color: #777;
+
+    text-align: center;
+
+    font-size: 12px;
 }
+
+footer strong {
+    color: #aaa;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-visual {
+        min-height: 270px;
+    }
+
+    .featured-content {
+        padding: 40px 30px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .home-btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 80px 20px 105px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        letter-spacing: -1.2px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .blog-section {
+        padding: 0 16px;
+
+        margin-top: -45px;
+    }
+
+    .featured-content {
+        padding: 35px 24px;
+    }
+
+    .featured-content h2 {
+        font-size: 25px;
+    }
+
+    .featured-visual {
+        min-height: 230px;
+    }
+
+    .visual-text strong {
+        font-size: 34px;
+    }
+
+    .section-heading {
+        display: block;
+
+        margin-top: 65px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .section-heading p {
+        margin-top: 8px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        padding: 45px 22px;
+    }
+
+    .cta h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+a:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 4px;
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-    <h1>BookMyAura Blog</h1>
-    <a href="../index.html">Home</a>
+
+<a href="../index.html" class="logo">
+    BookMyAura <span>Blog</span>
+</a>
+
+<a href="../index.html" class="home-btn">
+    Back to Home
+</a>
+
 </header>
 
-<div class="container">
-<div class="blog-card">
 
-<h2>How Online Salon Booking is Reshaping the Indian Beauty Industry in 2026 and Beyond</h2>
+<!-- =========================
+     HERO
+========================= -->
 
-<p>
-The Indian beauty and grooming industry is undergoing a powerful transformation. With increasing urbanization, rising disposable incomes, and a strong digital shift, salons are no longer just neighborhood businesses — they are evolving into structured service brands. However, while service quality has improved, booking systems in many salons still remain outdated.
-</p>
+<section class="hero">
 
-<p>
-In 2026, customer expectations have changed dramatically. Consumers want instant confirmation, structured scheduling, and a seamless digital experience. Waiting outside salons or repeatedly calling to check availability no longer aligns with modern behavior. Online salon booking platforms are solving this gap.
-</p>
+<div class="hero-content">
 
-<h3>The Rise of Digital Consumer Behavior in India</h3>
+<div class="hero-label">
+    Beauty • Technology • Business
+</div>
 
-<p>
-India has become one of the largest smartphone markets in the world. Customers use apps daily for food delivery, transportation, healthcare consultations, and e-commerce. Naturally, this digital-first mindset extends to salon services.
-</p>
-
-<ul>
-<li>Instant appointment confirmation</li>
-<li>Real-time slot visibility</li>
-<li>Time-saving scheduling</li>
-<li>Transparent service selection</li>
-<li>Reduced uncertainty</li>
-</ul>
+<h1>
+    Ideas shaping the future of beauty.
+</h1>
 
 <p>
-This behavioral shift is pushing salons toward digital adoption faster than ever before.
+    Explore insights, trends and ideas around salon businesses,
+    beauty services, digital booking and the evolving wellness
+    experience in India.
 </p>
 
-<h3>Challenges of Traditional Booking Systems</h3>
+</div>
+
+</section>
+
+
+<!-- =========================
+     BLOG CONTENT
+========================= -->
+
+<main class="blog-section">
+
+
+<!-- FEATURED ARTICLE -->
+
+<article class="featured-card">
+
+
+<div class="featured-visual">
+
+<div class="visual-text">
+
+<small>
+Featured Article
+</small>
+
+<strong>
+2026
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="featured-content">
+
+<span class="article-category">
+Beauty & Technology
+</span>
+
+<h2>
+How Online Salon Booking is Reshaping the Indian Beauty Industry in 2026
+</h2>
 
 <p>
-Manual booking systems may seem simple, but they create long-term operational challenges:
+The way customers discover and book beauty services is changing.
+Discover how digital booking is creating a more convenient experience
+for customers and new opportunities for salon businesses.
 </p>
 
-<ul>
-<li>Missed customer calls during peak hours</li>
-<li>Double bookings and scheduling confusion</li>
-<li>Untracked cancellations</li>
-<li>Staff underutilization</li>
-<li>Lack of performance data</li>
-</ul>
+<div class="article-meta">
+    September 11, 2026 &nbsp; • &nbsp; 8 min read
+</div>
 
-<p>
-Every missed booking directly impacts revenue. Over time, inefficient scheduling reduces profitability and customer satisfaction.
-</p>
+<a
+href="online-salon-booking-india.html"
+class="read-btn"
+id="readArticleBtn">
 
-<h3>How Online Booking Increases Revenue</h3>
-
-<p>
-Digital booking platforms operate 24/7. Even when salons are closed, customers can schedule appointments. This eliminates lost opportunities.
-</p>
-
-<p>
-Key business benefits include:
-</p>
-
-<ul>
-<li>Improved daily time-slot utilization</li>
-<li>Better peak-hour management</li>
-<li>Reduced no-show rates</li>
-<li>Improved customer retention</li>
-<li>Scalable growth systems</li>
-</ul>
-
-<h3>Data-Driven Growth and Business Insights</h3>
-
-<p>
-Online booking platforms provide structured data. Salon owners can analyze:
-</p>
-
-<ul>
-<li>Peak business hours</li>
-<li>Most popular services</li>
-<li>Customer return frequency</li>
-<li>Revenue patterns</li>
-</ul>
-
-<p>
-This data allows smarter pricing strategies, targeted promotions, and better staff allocation.
-</p>
-
-<h3>Introducing BookMyAura</h3>
-
-<p>
-BookMyAura is built to simplify salon booking across India. Customers can discover nearby salons, check available time slots, and confirm bookings instantly — without waiting or calling.
-</p>
-
-<p>
-For salon owners, BookMyAura provides structured appointment management, improved visibility, and digital scalability.
-</p>
-
-<h3>The Future of the Indian Beauty Industry</h3>
-
-<p>
-The Indian beauty industry is projected to grow significantly over the next decade. Digital platforms will define the leaders of tomorrow. Salons adopting online booking early will gain competitive advantage and stronger brand perception.
-</p>
-
-<h3>Frequently Asked Questions</h3>
-
-<h4>Is online salon booking suitable for small salons?</h4>
-<p>Yes. Digital systems benefit businesses of all sizes by improving organization and efficiency.</p>
-
-<h4>Does online booking increase revenue?</h4>
-<p>Yes. Optimized scheduling reduces missed opportunities and maximizes daily earnings.</p>
-
-<h4>Is online booking secure?</h4>
-<p>Modern booking platforms implement secure digital practices for reliable appointment management.</p>
-
-<h3>Conclusion</h3>
-
-<p>
-Online salon booking is no longer optional. It represents the next stage of evolution in India’s beauty industry.
-</p>
-
-<p>
-<strong>No Waiting. No Calling. Just Book.</strong>
-</p>
-
-<div class="cta-section">
-<h3>Download BookMyAura Today</h3>
-<p>Experience seamless salon booking with just a few taps.</p>
-
-<a href="https://play.google.com/store/apps/details?id=com.bookmyaura" 
-   target="_blank" 
-   class="cta-button"
-   id="playstoreBtn">
-   Download on Play Store
-</a>
-
-<a href="https://www.instagram.com/bookmyaura?igsh=MTRnenNnZGtlcTc4cA==" 
-   target="_blank" 
-   class="social-link"
-   id="instagramBtn">
-   Follow us on Instagram @bookmyaura
+Read Article →
 </a>
 
 </div>
 
+</article>
+
+
+<!-- MORE ARTICLES -->
+
+<div class="section-heading">
+
+<div>
+
+<h2>
+More from BookMyAura
+</h2>
+
+<p>
+More beauty and business insights coming soon.
+</p>
+
 </div>
+
 </div>
+
+
+<div class="blog-grid">
+
+
+<!-- CARD 1 -->
+
+<article class="blog-card">
+
+<div class="card-visual">
+    BEAUTY
+</div>
+
+<div class="card-content">
+
+<span class="coming-soon">
+Coming Soon
+</span>
+
+<h3>
+How Salons Can Build a Strong Digital Presence
+</h3>
+
+<p>
+Practical ideas for salon owners looking to improve
+their online visibility and reach more customers.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- CARD 2 -->
+
+<article class="blog-card">
+
+<div class="card-visual">
+    BUSINESS
+</div>
+
+<div class="card-content">
+
+<span class="coming-soon">
+Coming Soon
+</span>
+
+<h3>
+The Future of Salon Businesses in India
+</h3>
+
+<p>
+How changing customer expectations are influencing
+the way modern beauty businesses operate.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- CARD 3 -->
+
+<article class="blog-card">
+
+<div class="card-visual">
+    WELLNESS
+</div>
+
+<div class="card-content">
+
+<span class="coming-soon">
+Coming Soon
+</span>
+
+<h3>
+Why Convenience Matters in the Beauty Experience
+</h3>
+
+<p>
+Understanding why simple discovery and booking can
+make a difference in the modern customer journey.
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>
+Discover BookMyAura
+</h2>
+
+<p>
+Find salons, beauty and wellness services and
+experience a simpler way to book.
+</p>
+
+<a
+href="../index.html"
+class="cta-btn"
+id="homeCtaBtn">
+
+Explore BookMyAura
+
+</a>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-© 2026 BookMyAura. All Rights Reserved.
+
+© 2026 <strong>BookMyAura</strong>. All Rights Reserved.
+
 </footer>
 
+
+<!-- =========================
+     ANALYTICS
+========================= -->
+
 <script>
-document.getElementById("playstoreBtn").addEventListener("click", function() {
-  gtag('event', 'click_playstore', {
-    'event_category': 'engagement',
-    'event_label': 'Play Store Button'
-  });
-});
-document.getElementById("instagramBtn").addEventListener("click", function() {
-  gtag('event', 'click_instagram', {
-    'event_category': 'engagement',
-    'event_label': 'Instagram Link'
-  });
-});
+
+const readArticleBtn =
+document.getElementById("readArticleBtn");
+
+if (readArticleBtn) {
+
+    readArticleBtn.addEventListener("click", function() {
+
+        gtag("event", "blog_article_click", {
+
+            event_category: "engagement",
+
+            event_label:
+            "Online Salon Booking India Article"
+
+        });
+
+    });
+
+}
+
+
+const homeCtaBtn =
+document.getElementById("homeCtaBtn");
+
+if (homeCtaBtn) {
+
+    homeCtaBtn.addEventListener("click", function() {
+
+        gtag("event", "blog_home_cta", {
+
+            event_category: "engagement",
+
+            event_label:
+            "Explore BookMyAura"
+
+        });
+
+    });
+
+}
+
 </script>
+
 
 </body>
 </html>
