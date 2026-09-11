@@ -1,291 +1,2373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Book Beauty & Wellness Services Near You | BookMyAura App India</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="BookMyAura is India's trusted beauty & wellness booking app. Discover nearby salons, spas and wellness services with instant booking and secure payments." />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://bookmyaura.in/" />
+<title>BookMyAura | Book Beauty & Wellness Services Near You</title>
 
-<meta property="og:title" content="BookMyAura – Beauty & Wellness Booking App" />
-<meta property="og:description" content="Book trusted salons and spas near you instantly." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://bookmyaura.in/assets/app1.png" />
+<meta name="description" content="BookMyAura helps you discover and book salons, spas, beauty, grooming and wellness services near you. Find trusted businesses and book your next appointment with ease.">
 
-<meta name="theme-color" content="#6a5cff" />
-<link rel="icon" href="assets/app1.png" type="image/png" />
+<meta name="keywords" content="BookMyAura, salon booking app India, beauty booking app, salon appointment booking, spa booking India, beauty and wellness services">
+
+<meta name="author" content="BookMyAura">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://bookmyaura.in/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="BookMyAura | Book Beauty & Wellness Services Near You">
+<meta property="og:description" content="Discover trusted salons, spas and wellness services near you. Book your next appointment with BookMyAura.">
+<meta property="og:url" content="https://bookmyaura.in/">
+<meta property="og:site_name" content="BookMyAura">
+<meta property="og:image" content="https://bookmyaura.in/assets/app1.png">
+
+<meta name="theme-color" content="#000000">
+
+<link rel="icon" href="assets/app1.png" type="image/png">
+
 
 <!-- GOOGLE ANALYTICS -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XR2TKGJJRW"></script>
+
 <script>
+
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
 gtag('js', new Date());
+
 gtag('config', 'G-XR2TKGJJRW');
+
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- FONT -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 
 <style>
-/* ====== SAME ORIGINAL STYLE (UNCHANGED) ====== */
-:root {
-  --primary:#6a5cff;
-  --secondary:#b9b5ff;
-  --glass:rgba(255,255,255,.6);
-  --dark:#1e1e2f;
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
-*{box-sizing:border-box;margin:0;padding:0}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-  font-family:'Inter',sans-serif;
-  background:radial-gradient(circle at top,#ebe9ff,#f6f5ff);
-  color:var(--dark);
-  overflow-x:hidden;
+    font-family:'Inter',sans-serif;
+    background:#f7f7f7;
+    color:#111;
+    overflow-x:hidden;
 }
-.brand-top{text-align:center;padding:50px 20px 10px}
-.brand-top h1{
-  font-size:3rem;font-weight:700;
-  background:linear-gradient(135deg,var(--primary),#857bff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+
+a{
+    text-decoration:none;
 }
-.brand-top .tagline{
-  margin-top:12px;font-size:1.1rem;letter-spacing:1px;
-  color:#555;font-weight:500;opacity:.9;
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    height:72px;
+
+    padding:0 7%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:rgba(0,0,0,.96);
+
+    backdrop-filter:blur(15px);
+
+    color:#fff;
 }
+
+.logo{
+
+    color:#fff;
+
+    font-size:21px;
+
+    font-weight:800;
+
+    letter-spacing:-.7px;
+}
+
+.logo span{
+
+    color:#888;
+
+    font-weight:500;
+}
+
+.nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+}
+
+.nav a{
+
+    color:#aaa;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    transition:.3s ease;
+}
+
+.nav a:hover{
+
+    color:#fff;
+}
+
+.nav-button{
+
+    padding:9px 18px;
+
+    border:1px solid #444;
+
+    border-radius:30px;
+
+    color:#fff !important;
+}
+
+.nav-button:hover{
+
+    background:#fff;
+
+    color:#000 !important;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
-  min-height:90vh;display:flex;align-items:center;
-  justify-content:space-between;padding:60px 10%;
-  position:relative;
+
+    min-height:calc(100vh - 72px);
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:90px 7%;
+
+    background:#000;
+
+    color:#fff;
 }
+
+
+/* Background glow */
+
 .hero::before{
-  content:"";position:absolute;width:520px;height:520px;
-  background:radial-gradient(circle,var(--secondary),transparent 70%);
-  filter:blur(90px);top:-120px;right:-180px;
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    top:-250px;
+
+    right:-150px;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,255,255,.12),
+        transparent 68%
+    );
+
+    filter:blur(20px);
 }
-.hero-content{max-width:520px;z-index:2}
-.hero h2{font-size:2.8rem;font-weight:700}
-.hero h2 span{color:var(--primary)}
-.hero p{margin-top:20px;font-size:1.1rem;color:#555}
-.hero-buttons{margin-top:35px;display:flex;gap:16px}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    border-radius:50%;
+
+    bottom:-250px;
+
+    left:-150px;
+
+    background:rgba(255,255,255,.04);
+
+    filter:blur(50px);
+}
+
+
+.hero-inner{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+/* Hero text */
+
+.hero-content{
+
+    max-width:620px;
+}
+
+.hero-label{
+
+    display:inline-flex;
+
+    padding:8px 14px;
+
+    border:1px solid #333;
+
+    border-radius:30px;
+
+    color:#aaa;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+
+    font-size:clamp(46px,6vw,76px);
+
+    line-height:1.02;
+
+    letter-spacing:-3px;
+
+    font-weight:800;
+}
+
+.hero h1 span{
+
+    color:#888;
+}
+
+.hero-description{
+
+    max-width:570px;
+
+    margin-top:25px;
+
+    color:#999;
+
+    font-size:16px;
+
+    line-height:1.8;
+}
+
+
+/* Hero buttons */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+}
+
 .btn{
-  padding:14px 26px;border-radius:14px;text-decoration:none;
-  font-size:.95rem;transition:all .3s ease;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 24px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:.3s ease;
 }
+
 .btn-primary{
-  background:linear-gradient(135deg,var(--primary),#857bff);
-  color:#fff;box-shadow:0 18px 40px rgba(106,92,255,.35);
+
+    background:#fff;
+
+    color:#000;
 }
+
 .btn-primary:hover{
-  transform:translateY(-4px) scale(1.05);
-  box-shadow:0 30px 70px rgba(106,92,255,.45);
+
+    transform:translateY(-3px);
+
+    background:#e8e8e8;
 }
-.btn-outline{border:1px solid var(--primary);color:var(--primary)}
+
+.btn-outline{
+
+    border:1px solid #444;
+
+    color:#fff;
+}
+
 .btn-outline:hover{
-  background:rgba(106,92,255,.08);
-  transform:translateY(-3px);
+
+    background:#fff;
+
+    color:#000;
+
+    border-color:#fff;
 }
+
+
+/* Hero note */
+
+.hero-note{
+
+    margin-top:22px;
+
+    color:#666;
+
+    font-size:11px;
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+.phone-area{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+}
+
+.phone-glow{
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    filter:blur(50px);
+}
+
 .phone{
-  width:280px;height:560px;border-radius:42px;
-  background:linear-gradient(160deg,#fff,#f1f0ff);
-  box-shadow:0 50px 90px rgba(0,0,0,.22);
-  position:relative;
-  transform:perspective(1200px) rotateY(-12deg) rotateX(5deg);
-  animation:float 5s ease-in-out infinite;
-  overflow:hidden;
+
+    position:relative;
+
+    z-index:2;
+
+    width:285px;
+
+    height:570px;
+
+    padding:10px;
+
+    border-radius:43px;
+
+    background:linear-gradient(
+        145deg,
+        #3b3b3b,
+        #111
+    );
+
+    box-shadow:
+
+        0 45px 100px rgba(0,0,0,.7),
+
+        inset 0 0 0 1px #555;
+
+    transform:
+        perspective(1200px)
+        rotateY(-12deg)
+        rotateX(4deg);
+
+    animation:phoneFloat 5s ease-in-out infinite;
+
+    overflow:hidden;
 }
+
+.phone::before{
+
+    content:"";
+
+    position:absolute;
+
+    z-index:5;
+
+    width:80px;
+
+    height:20px;
+
+    top:10px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#000;
+
+    border-radius:20px;
+}
+
 .phone img{
-  position:absolute;inset:14px;
-  width:calc(100% - 28px);
-  height:calc(100% - 28px);
-  border-radius:28px;
-  object-fit:cover;
-  transition:opacity .6s ease,transform .6s ease;
+
+    position:absolute;
+
+    inset:10px;
+
+    width:calc(100% - 20px);
+
+    height:calc(100% - 20px);
+
+    border-radius:34px;
+
+    object-fit:cover;
+
+    transition:opacity .5s ease,
+               transform .5s ease;
 }
-@keyframes float{
-  0%,100%{transform:perspective(1200px) rotateY(-12deg) rotateX(5deg)}
-  50%{transform:perspective(1200px) rotateY(-10deg) rotateX(4deg) translateY(-14px)}
+
+@keyframes phoneFloat{
+
+    0%,100%{
+
+        transform:
+            perspective(1200px)
+            rotateY(-12deg)
+            rotateX(4deg)
+            translateY(0);
+    }
+
+    50%{
+
+        transform:
+            perspective(1200px)
+            rotateY(-9deg)
+            rotateX(3deg)
+            translateY(-14px);
+    }
 }
-.platform{padding:80px 10%;text-align:center}
-.platform-box{
-  max-width:720px;margin:auto;background:var(--glass);
-  backdrop-filter:blur(14px);border-radius:26px;
-  padding:45px;box-shadow:0 30px 60px rgba(0,0,0,.1);
-  transition:transform .4s ease;
+
+
+/* =========================
+   TRUST BAR
+========================= */
+
+.trust{
+
+    background:#fff;
+
+    border-bottom:1px solid #eee;
+
+    padding:25px 7%;
 }
-.platform-box:hover{transform:translateY(-8px)}
+
+.trust-inner{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    text-align:center;
+}
+
+.trust-item{
+
+    padding:10px;
+
+    border-right:1px solid #eee;
+}
+
+.trust-item:last-child{
+
+    border-right:none;
+}
+
+.trust-item strong{
+
+    display:block;
+
+    font-size:13px;
+
+    margin-bottom:5px;
+}
+
+.trust-item span{
+
+    color:#888;
+
+    font-size:11px;
+}
+
+
+/* =========================
+   PLATFORM
+========================= */
+
+.platform{
+
+    padding:100px 7%;
+
+    background:#f7f7f7;
+}
+
+.platform-inner{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.section-label{
+
+    color:#888;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+}
+
+.platform h2{
+
+    font-size:38px;
+
+    letter-spacing:-1.3px;
+}
+
+.platform-description{
+
+    max-width:600px;
+
+    margin:15px auto 35px;
+
+    color:#777;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
 .store-links{
-  display:flex;justify-content:center;gap:20px;
-  flex-wrap:wrap;margin-top:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
 }
+
 .store-btn{
-  display:flex;align-items:center;gap:10px;
-  padding:12px 22px;background:#000;color:#fff;
-  border-radius:14px;text-decoration:none;transition:.3s ease;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    min-width:170px;
+
+    justify-content:center;
+
+    padding:13px 20px;
+
+    background:#000;
+
+    color:#fff;
+
+    border-radius:12px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    transition:.3s ease;
 }
-.store-btn:hover{transform:translateY(-5px) scale(1.05)}
-.store-btn img{width:22px}
-.store-btn.disabled{background:#333;opacity:.7}
-.section{padding:100px 10%}
-.section h2{text-align:center;margin-bottom:50px}
+
+.store-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+.store-btn img{
+
+    width:21px;
+
+    height:21px;
+
+    object-fit:contain;
+}
+
+.store-btn.instagram{
+
+    background:#111;
+}
+
+.store-btn.disabled{
+
+    background:#ddd;
+
+    color:#777;
+
+    cursor:default;
+}
+
+.store-btn.disabled:hover{
+
+    transform:none;
+
+    box-shadow:none;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-section{
+
+    padding:110px 7%;
+
+    background:#fff;
+}
+
+.section-container{
+
+    max-width:1150px;
+
+    margin:auto;
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.section-heading h2{
+
+    font-size:40px;
+
+    letter-spacing:-1.5px;
+}
+
+.section-heading p{
+
+    max-width:620px;
+
+    margin:14px auto 0;
+
+    color:#777;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
 .features{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:18px;
 }
-.card{
-  background:var(--glass);
-  border-radius:22px;padding:30px;text-align:center;
-  box-shadow:0 30px 60px rgba(0,0,0,.08);
-  transition:all .4s ease;
+
+.feature-card{
+
+    padding:32px 25px;
+
+    background:#fafafa;
+
+    border:1px solid #eee;
+
+    border-radius:18px;
+
+    transition:.35s ease;
 }
-.card:hover{transform:translateY(-12px) scale(1.03)}
+
+.feature-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.07);
+}
+
+.feature-number{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:42px;
+
+    height:42px;
+
+    margin-bottom:25px;
+
+    border-radius:12px;
+
+    background:#000;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.feature-card h3{
+
+    font-size:17px;
+
+    margin-bottom:10px;
+}
+
+.feature-card p{
+
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   FOR CUSTOMERS / PARTNERS
+========================= */
+
+.audience{
+
+    padding:110px 7%;
+
+    background:#f7f7f7;
+}
+
+.audience-grid{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.audience-card{
+
+    padding:50px;
+
+    border-radius:22px;
+
+    background:#000;
+
+    color:#fff;
+
+    min-height:300px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.audience-card.light{
+
+    background:#fff;
+
+    color:#111;
+
+    border:1px solid #eee;
+}
+
+.audience-label{
+
+    color:#888;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.audience-card.light .audience-label{
+
+    color:#999;
+}
+
+.audience-card h2{
+
+    margin:15px 0;
+
+    font-size:30px;
+
+    line-height:1.2;
+
+    letter-spacing:-1px;
+}
+
+.audience-card p{
+
+    color:#aaa;
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    max-width:450px;
+}
+
+.audience-card.light p{
+
+    color:#777;
+}
+
+.audience-link{
+
+    width:fit-content;
+
+    margin-top:25px;
+
+    padding:11px 20px;
+
+    border-radius:30px;
+
+    background:#fff;
+
+    color:#000;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.audience-card.light .audience-link{
+
+    background:#000;
+
+    color:#fff;
+}
+
+
+/* =========================
+   BLOG
+========================= */
+
+.blog-section{
+
+    padding:110px 7%;
+
+    background:#fff;
+}
+
+.blog-container{
+
+    max-width:1150px;
+
+    margin:auto;
+}
+
+.blog-header{
+
+    display:flex;
+
+    align-items:end;
+
+    justify-content:space-between;
+
+    margin-bottom:40px;
+}
+
+.blog-header h2{
+
+    font-size:40px;
+
+    letter-spacing:-1.5px;
+}
+
+.blog-header p{
+
+    color:#888;
+
+    font-size:13px;
+}
+
+.blog-link{
+
+    color:#111;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    border-bottom:1px solid #111;
+
+    padding-bottom:4px;
+}
+
+.blog-feature{
+
+    display:grid;
+
+    grid-template-columns:1fr 1.2fr;
+
+    min-height:330px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    background:#f7f7f7;
+
+    border:1px solid #eee;
+
+    transition:.35s ease;
+}
+
+.blog-feature:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.08);
+}
+
+.blog-visual{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+    background:#000;
+
+    color:#fff;
+
+    overflow:hidden;
+}
+
+.blog-visual::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:270px;
+
+    height:270px;
+
+    border:1px solid #333;
+
+    border-radius:50%;
+}
+
+.blog-visual::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:170px;
+
+    height:170px;
+
+    border:1px solid #222;
+
+    border-radius:50%;
+}
+
+.blog-year{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+}
+
+.blog-year small{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#888;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.blog-year strong{
+
+    font-size:55px;
+
+    letter-spacing:-3px;
+}
+
+.blog-content{
+
+    padding:45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.blog-category{
+
+    width:fit-content;
+
+    padding:7px 12px;
+
+    background:#e9e9e9;
+
+    border-radius:20px;
+
+    color:#666;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+.blog-content h3{
+
+    margin:18px 0 14px;
+
+    font-size:27px;
+
+    line-height:1.3;
+
+    letter-spacing:-.8px;
+}
+
+.blog-content p{
+
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    max-width:600px;
+}
+
+.read-blog{
+
+    display:inline-flex;
+
+    width:fit-content;
+
+    margin-top:22px;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    background:#000;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+}
+
+.read-blog:hover{
+
+    transform:translateX(4px);
+
+    background:#333;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta{
+
+    padding:110px 7%;
+
+    background:#000;
+
+    color:#fff;
+
+    text-align:center;
+}
+
+.final-cta h2{
+
+    font-size:clamp(38px,5vw,60px);
+
+    letter-spacing:-2px;
+
+    line-height:1.1;
+}
+
+.final-cta p{
+
+    max-width:600px;
+
+    margin:18px auto 0;
+
+    color:#999;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+.final-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+}
+
+.final-btn{
+
+    padding:14px 25px;
+
+    border-radius:30px;
+
+    background:#fff;
+
+    color:#000;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+}
+
+.final-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#ddd;
+}
+
+.final-btn.outline{
+
+    background:transparent;
+
+    color:#fff;
+
+    border:1px solid #444;
+}
+
+.final-btn.outline:hover{
+
+    background:#fff;
+
+    color:#000;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
-  padding:40px 10%;text-align:center;font-size:.85rem;color:#666;
+
+    padding:45px 7%;
+
+    background:#000;
+
+    border-top:1px solid #222;
+
+    color:#666;
+
+    text-align:center;
+
+    font-size:11px;
 }
-footer a{color:var(--primary);margin:0 8px;text-decoration:none}
+
+.footer-links{
+
+    margin-bottom:18px;
+}
+
+.footer-links a{
+
+    color:#888;
+
+    margin:0 10px;
+
+    transition:.3s ease;
+}
+
+.footer-links a:hover{
+
+    color:#fff;
+}
+
+footer strong{
+
+    color:#aaa;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:900px){
-  .hero{flex-direction:column;text-align:center}
-  .hero-buttons{justify-content:center}
-  .phone{margin-top:50px}
+
+    .nav a:not(.nav-button){
+
+        display:none;
+    }
+
+    .hero{
+
+        padding:75px 6%;
+    }
+
+    .hero-inner{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:55px;
+    }
+
+    .hero-content{
+
+        margin:auto;
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+    }
+
+    .hero-note{
+
+        text-align:center;
+    }
+
+    .phone{
+
+        transform:
+            perspective(1200px)
+            rotateY(-7deg)
+            rotateX(3deg);
+    }
+
+    .trust-inner{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trust-item:nth-child(2){
+
+        border-right:none;
+    }
+
+    .features{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .audience-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .blog-feature{
+
+        grid-template-columns:1fr;
+    }
+
+    .blog-visual{
+
+        min-height:250px;
+    }
+
 }
+
+
+@media(max-width:600px){
+
+    header{
+
+        padding:0 20px;
+    }
+
+    .logo{
+
+        font-size:18px;
+    }
+
+    .nav-button{
+
+        padding:8px 15px;
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding:70px 20px 90px;
+    }
+
+    .hero h1{
+
+        font-size:46px;
+
+        letter-spacing:-2px;
+    }
+
+    .hero-description{
+
+        font-size:14px;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .btn{
+
+        width:100%;
+    }
+
+    .phone{
+
+        width:245px;
+
+        height:490px;
+
+        border-radius:38px;
+    }
+
+    .phone img{
+
+        border-radius:29px;
+    }
+
+    .trust{
+
+        padding:20px;
+    }
+
+    .trust-inner{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trust-item{
+
+        border-bottom:1px solid #eee;
+    }
+
+    .platform,
+    .features-section,
+    .audience,
+    .blog-section{
+
+        padding:80px 20px;
+    }
+
+    .platform h2,
+    .section-heading h2,
+    .blog-header h2{
+
+        font-size:30px;
+    }
+
+    .features{
+
+        grid-template-columns:1fr;
+    }
+
+    .audience-card{
+
+        padding:35px 25px;
+    }
+
+    .audience-card h2{
+
+        font-size:27px;
+    }
+
+    .blog-header{
+
+        display:block;
+    }
+
+    .blog-header p{
+
+        margin-top:8px;
+    }
+
+    .blog-header .blog-link{
+
+        display:inline-block;
+
+        margin-top:15px;
+    }
+
+    .blog-content{
+
+        padding:30px 24px;
+    }
+
+    .blog-content h3{
+
+        font-size:24px;
+    }
+
+    .final-cta{
+
+        padding:80px 20px;
+    }
+
+    .final-cta h2{
+
+        font-size:40px;
+    }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<div class="brand-top">
-  <h1>BookMyAura</h1>
-  <p class="tagline">The Future of Smart Salon Booking</p>
-</div>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<a href="index.html" class="logo">
+    BookMyAura <span>India</span>
+</a>
+
+<nav class="nav">
+
+<a href="#features">Features</a>
+
+<a href="#blog">Blog</a>
+
+<a href="blog/index.html" class="nav-button">
+    Our Blog
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
-  <div class="hero-content">
-    <h2>Book Beauty & Wellness <span>Instantly</span></h2>
-    <p>Discover trusted salons, spas and wellness services near you.</p>
 
-    <div class="hero-buttons">
-      <a href="https://play.google.com/store/apps/details?id=com.bookmyaura"
-         target="_blank"
-         class="btn btn-primary"
-         id="mainPlayBtn">
-         Get the App
-      </a>
+<div class="hero-inner">
 
-      <a href="https://play.google.com/store/apps/details?id=com.bookmyaura"
-         target="_blank"
-         class="btn btn-outline"
-         id="partnerBtn">
-         Become a Partner
-      </a>
-    </div>
-  </div>
 
-  <div class="phone">
-    <img id="appScreen" src="assets/app1.png" alt="BookMyAura App">
-  </div>
+<div class="hero-content">
+
+<div class="hero-label">
+    Beauty • Wellness • Booking
+</div>
+
+<h1>
+    Your beauty.
+    <span>Your way.</span>
+</h1>
+
+<p class="hero-description">
+    Discover trusted salons, spas, beauty and wellness services
+    near you — and make your next appointment easier with BookMyAura.
+</p>
+
+
+<div class="hero-buttons">
+
+<a
+href="https://play.google.com/store/apps/details?id=com.bookmyaura"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-primary"
+id="mainPlayBtn">
+
+Get the App
+
+</a>
+
+
+<a
+href="https://play.google.com/store/apps/details?id=com.bookmyaura"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-outline"
+id="partnerBtn">
+
+Become a Partner
+
+</a>
+
+</div>
+
+
+<p class="hero-note">
+    Available on Android • App Store coming soon
+</p>
+
+</div>
+
+
+<!-- PHONE -->
+
+<div class="phone-area">
+
+<div class="phone-glow"></div>
+
+<div class="phone">
+
+<img
+id="appScreen"
+src="assets/app1.png"
+alt="BookMyAura mobile app interface"
+>
+
+</div>
+
+</div>
+
+
+</div>
+
 </section>
+
+
+<!-- =========================
+     TRUST BAR
+========================= -->
+
+<section class="trust">
+
+<div class="trust-inner">
+
+<div class="trust-item">
+
+<strong>Verified Partners</strong>
+
+<span>Discover trusted businesses</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>Easy Booking</strong>
+
+<span>Simple appointment experience</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>Secure Payments</strong>
+
+<span>UPI & encrypted payments</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>Nearby Discovery</strong>
+
+<span>Find services around you</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PLATFORM
+========================= -->
 
 <section class="platform">
-  <div class="platform-box">
-    <h3>Available On</h3>
-    <div class="store-links">
-      <a href="https://play.google.com/store/apps/details?id=com.bookmyaura"
-         target="_blank"
-         class="store-btn"
-         id="storePlayBtn">
-         <img src="assets/playstore.png">
-         <span>Google Play</span>
-      </a>
 
-      <a href="https://www.instagram.com/bookmyaura"
-         target="_blank"
-         class="store-btn"
-         style="background:#E1306C"
-         id="instagramBtn">
-         <span>Instagram</span>
-      </a>
+<div class="platform-inner">
 
-      <div class="store-btn disabled">
-         <img src="assets/appstore.png">
-         <span>App Store (Coming Soon)</span>
-      </div>
-    </div>
-  </div>
+<div class="section-label">
+    Get Started
+</div>
+
+<h2>
+    Everything starts with one tap.
+</h2>
+
+<p class="platform-description">
+    Discover beauty and wellness services, explore your options
+    and connect with businesses through BookMyAura.
+</p>
+
+
+<div class="store-links">
+
+
+<a
+href="https://play.google.com/store/apps/details?id=com.bookmyaura"
+target="_blank"
+rel="noopener noreferrer"
+class="store-btn"
+id="storePlayBtn">
+
+<img
+src="assets/playstore.png"
+alt="Google Play"
+>
+
+<span>
+    Google Play
+</span>
+
+</a>
+
+
+<a
+href="https://www.instagram.com/bookmyaura"
+target="_blank"
+rel="noopener noreferrer"
+class="store-btn instagram"
+id="instagramBtn">
+
+<span>
+    Instagram
+</span>
+
+</a>
+
+
+<div class="store-btn disabled">
+
+<img
+src="assets/appstore.png"
+alt="App Store"
+>
+
+<span>
+    Coming Soon
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
 
-<section class="section">
-  <h2>Why BookMyAura</h2>
-  <div class="features">
-    <div class="card">
-      <h3>Verified Partners</h3>
-      <p>Only trusted and verified businesses.</p>
-    </div>
-    <div class="card">
-      <h3>Instant Booking</h3>
-      <p>No calls, no waiting.</p>
-    </div>
-    <div class="card">
-      <h3>Secure Payments</h3>
-      <p>UPI & encrypted payments.</p>
-    </div>
-    <div class="card">
-      <h3>Nearby Discovery</h3>
-      <p>Smart location matching.</p>
-    </div>
-  </div>
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section
+class="features-section"
+id="features"
+>
+
+<div class="section-container">
+
+
+<div class="section-heading">
+
+<div class="section-label">
+    Why BookMyAura
+</div>
+
+<h2>
+    Built for a simpler booking experience.
+</h2>
+
+<p>
+    BookMyAura brings discovery, booking and digital access
+    together in one modern experience.
+</p>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature-card">
+
+<div class="feature-number">
+    01
+</div>
+
+<h3>
+    Verified Partners
+</h3>
+
+<p>
+    Discover salons, spas and beauty businesses
+    through a more trusted digital experience.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-number">
+    02
+</div>
+
+<h3>
+    Instant Booking
+</h3>
+
+<p>
+    Make the appointment process simpler without
+    depending entirely on calls or messages.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-number">
+    03
+</div>
+
+<h3>
+    Secure Payments
+</h3>
+
+<p>
+    Enjoy a convenient payment experience with
+    supported digital payment options.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-number">
+    04
+</div>
+
+<h3>
+    Nearby Discovery
+</h3>
+
+<p>
+    Discover beauty and wellness businesses
+    around you through smart location matching.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- =========================
+     CUSTOMER / PARTNER
+========================= -->
+
+<section class="audience">
+
+<div class="audience-grid">
+
+
+<div class="audience-card">
+
+<div class="audience-label">
+    For Customers
+</div>
+
+<h2>
+    Find your next beauty experience.
+</h2>
+
+<p>
+    Discover salons, spas and wellness services near you
+    and make your appointment journey more convenient.
+</p>
+
+<a
+href="https://play.google.com/store/apps/details?id=com.bookmyaura"
+target="_blank"
+rel="noopener noreferrer"
+class="audience-link"
+id="customerBtn">
+
+Get the App →
+
+</a>
+
+</div>
+
+
+<div class="audience-card light">
+
+<div class="audience-label">
+    For Businesses
+</div>
+
+<h2>
+    Take your salon into the digital world.
+</h2>
+
+<p>
+    Build a stronger digital presence and make it easier
+    for customers to discover and connect with your business.
+</p>
+
+<a
+href="https://play.google.com/store/apps/details?id=com.bookmyaura"
+target="_blank"
+rel="noopener noreferrer"
+class="audience-link"
+id="businessBtn">
+
+Become a Partner →
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BLOG
+========================= -->
+
+<section
+class="blog-section"
+id="blog"
+>
+
+<div class="blog-container">
+
+
+<div class="blog-header">
+
+<div>
+
+<div class="section-label">
+    BookMyAura Insights
+</div>
+
+<h2>
+    From the Blog
+</h2>
+
+<p>
+    Ideas about beauty, technology and the future of salon businesses.
+</p>
+
+</div>
+
+
+<a
+href="blog/index.html"
+class="blog-link">
+
+View All Articles →
+
+</a>
+
+</div>
+
+
+<article class="blog-feature">
+
+
+<div class="blog-visual">
+
+<div class="blog-year">
+
+<small>
+    Featured Article
+</small>
+
+<strong>
+    2026
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="blog-content">
+
+<span class="blog-category">
+    Beauty & Technology
+</span>
+
+<h3>
+    How Online Salon Booking is Reshaping the Indian Beauty Industry in 2026
+</h3>
+
+<p>
+    The way customers discover and book beauty services is changing.
+    Explore how digital booking is creating a more convenient
+    experience for customers and new opportunities for salon businesses.
+</p>
+
+
+<a
+href="blog/online-salon-booking-india.html"
+class="read-blog"
+id="homeBlogBtn">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="final-cta">
+
+<div class="section-label">
+    BookMyAura
+</div>
+
+<h2>
+    Beauty is personal.<br>
+    Booking should be simple.
+</h2>
+
+<p>
+    Discover your next salon, beauty or wellness experience
+    with BookMyAura.
+</p>
+
+
+<div class="final-buttons">
+
+
+<a
+href="https://play.google.com/store/apps/details?id=com.bookmyaura"
+target="_blank"
+rel="noopener noreferrer"
+class="final-btn"
+id="finalPlayBtn">
+
+Download the App
+
+</a>
+
+
+<a
+href="blog/index.html"
+class="final-btn outline"
+id="finalBlogBtn">
+
+Explore Our Blog
+
+</a>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-  <p>
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="delete-account.html">Delete Account</a> |
-    <a href="terms.html">Terms</a>
-  </p>
-  <p>© 2026 BookMyAura. All rights reserved</p>
+
+<div class="footer-links">
+
+<a href="privacy-policy.html">
+    Privacy Policy
+</a>
+
+<a href="delete-account.html">
+    Delete Account
+</a>
+
+<a href="terms.html">
+    Terms
+</a>
+
+<a href="blog/index.html">
+    Blog
+</a>
+
+</div>
+
+<p>
+© 2026 <strong>BookMyAura</strong>. All rights reserved.
+</p>
+
 </footer>
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
-/* ORIGINAL PHONE ANIMATION */
-const screens=["assets/app1.png","assets/app2.png","assets/app3.png"];
-let i=0;
-const img=document.getElementById("appScreen");
-setInterval(()=>{
-  img.style.opacity=0;
-  img.style.transform="scale(.96)";
-  setTimeout(()=>{
-    i=(i+1)%screens.length;
-    img.src=screens[i];
-    img.style.opacity=1;
-    img.style.transform="scale(1)";
-  },400);
-},3000);
 
-/* TRACKING */
-document.getElementById("mainPlayBtn").addEventListener("click",()=> {
-  gtag('event','homepage_play_click');
-});
-document.getElementById("partnerBtn").addEventListener("click",()=> {
-  gtag('event','homepage_partner_click');
-});
-document.getElementById("storePlayBtn").addEventListener("click",()=> {
-  gtag('event','store_play_click');
-});
-document.getElementById("instagramBtn").addEventListener("click",()=> {
-  gtag('event','instagram_click');
-});
 
-/* Scroll tracking */
-let scrollTracked=false;
-window.addEventListener("scroll",()=>{
-  if(!scrollTracked && window.scrollY>600){
-    scrollTracked=true;
-    gtag('event','scroll_engagement');
-  }
-});
+/* =========================
+   APP SCREEN ANIMATION
+========================= */
+
+const screens = [
+
+    "assets/app1.png",
+    "assets/app2.png",
+    "assets/app3.png"
+
+];
+
+let screenIndex = 0;
+
+const appScreen =
+document.getElementById("appScreen");
+
+
+setInterval(() => {
+
+    appScreen.style.opacity = "0";
+
+    appScreen.style.transform =
+        "scale(.96)";
+
+    setTimeout(() => {
+
+        screenIndex =
+            (screenIndex + 1) % screens.length;
+
+        appScreen.src =
+            screens[screenIndex];
+
+        appScreen.style.opacity = "1";
+
+        appScreen.style.transform =
+            "scale(1)";
+
+    }, 450);
+
+}, 3000);
+
+
+/* =========================
+   ANALYTICS HELPERS
+========================= */
+
+function trackClick(
+    elementId,
+    eventName,
+    eventLabel
+){
+
+    const element =
+        document.getElementById(elementId);
+
+    if(!element) return;
+
+    element.addEventListener(
+        "click",
+        function(){
+
+            gtag(
+                "event",
+                eventName,
+                {
+                    event_category:"engagement",
+                    event_label:eventLabel
+                }
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================
+   BUTTON TRACKING
+========================= */
+
+trackClick(
+    "mainPlayBtn",
+    "homepage_play_click",
+    "Hero Get the App"
+);
+
+
+trackClick(
+    "partnerBtn",
+    "homepage_partner_click",
+    "Hero Become a Partner"
+);
+
+
+trackClick(
+    "storePlayBtn",
+    "store_play_click",
+    "Google Play"
+);
+
+
+trackClick(
+    "instagramBtn",
+    "instagram_click",
+    "Instagram"
+);
+
+
+trackClick(
+    "customerBtn",
+    "customer_app_click",
+    "Customer Get the App"
+);
+
+
+trackClick(
+    "businessBtn",
+    "business_partner_click",
+    "Business Become a Partner"
+);
+
+
+trackClick(
+    "homeBlogBtn",
+    "homepage_blog_click",
+    "Featured Blog Article"
+);
+
+
+trackClick(
+    "finalPlayBtn",
+    "final_play_click",
+    "Final CTA Download App"
+);
+
+
+trackClick(
+    "finalBlogBtn",
+    "final_blog_click",
+    "Final CTA Blog"
+);
+
+
+/* =========================
+   SCROLL ENGAGEMENT
+========================= */
+
+let scrollTracked = false;
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        if(
+            !scrollTracked &&
+            window.scrollY > 600
+        ){
+
+            scrollTracked = true;
+
+            gtag(
+                "event",
+                "scroll_engagement",
+                {
+                    event_category:"engagement",
+                    event_label:"Homepage 600px Scroll"
+                }
+            );
+
+        }
+
+    }
+);
+
 </script>
+
 
 </body>
 </html>
